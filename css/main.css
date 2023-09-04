@@ -1333,17 +1333,17 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .page__basic__main {
-    background-image: url(../../img/webp/city.webp);
+    background-image: url(./../img/webp/city.webp);
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .page__basic__main {
-    background-image: url(../../img/webp/city.webp);
+    background-image: url(./../img/webp/city.webp);
   }
 }
 @media screen and (min-width: 768px) {
   .page__basic__main {
-    background-image: url(../../img/webp/city.webp);
+    background-image: url(./../img/webp/city.webp);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1099px) {

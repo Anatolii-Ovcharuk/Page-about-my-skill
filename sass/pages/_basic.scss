@@ -14,15 +14,15 @@
     background-size: cover;
 
     @media screen and (max-width: $mob) and (orientation: portrait)  {
-        background-image: url(../../img/webp/city.webp);
+        background-image: url(./../img/webp/city.webp);
     }
     
     @media screen and (max-width: $mob) and (orientation: landscape) {
-        background-image: url(../../img/webp/city.webp);            
+        background-image: url(./../img/webp/city.webp);            
     }
 	
     @media screen and (min-width: $tab-st) {
-        background-image: url(../../img/webp/city.webp);  
+        background-image: url(./../img/webp/city.webp);  
     }
 
 	@media screen and (min-width: $tab-st) and (max-width: $tab-en) {
