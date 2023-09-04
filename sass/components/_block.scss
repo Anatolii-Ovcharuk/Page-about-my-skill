@@ -202,7 +202,7 @@
 .animation__block-one {
 
      @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
-        background-image: url(../../img/jpg/chip_shema_dark_opt.jpg);
+        background-image: url(./../img/jpg/chip_shema_dark_opt.jpg);
      }
 
     // animation: AnimSecond 8s linear 2s 1 normal forwards;  
@@ -249,7 +249,7 @@
 // Animation in fourth block
 .animation__block-two {
     @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
-    background-image: url(../../img/jpg/string_remake_opt.jpg);
+    background-image: url(./../img/jpg/string_remake_opt.jpg);
     }
     
     animation: AnimFourth 38s linear 2s 1 normal forwards;  

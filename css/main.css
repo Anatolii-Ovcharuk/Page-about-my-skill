@@ -80,17 +80,17 @@ p, h1, h2, h3, ul, li {
 }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .page__language {
-    background-image: url(../../img/png/World_map_Globe_Map.png);
+    background-image: url(./../img/png/World_map_Globe_Map.png);
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .page__language {
-    background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);
+    background-image: url(./../img/png/gray_and_black_map_screenshot_alpha.png);
   }
 }
 @media screen and (min-width: 768px) {
   .page__language {
-    background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);
+    background-image: url(./../img/png/gray_and_black_map_screenshot_alpha.png);
   }
 }
 
@@ -378,7 +378,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
   .animation__block-one {
-    background-image: url(../../img/jpg/chip_shema_dark_opt.jpg);
+    background-image: url(./../img/jpg/chip_shema_dark_opt.jpg);
   }
 }
 
@@ -413,7 +413,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
   .animation__block-two {
-    background-image: url(../../img/jpg/string_remake_opt.jpg);
+    background-image: url(./../img/jpg/string_remake_opt.jpg);
   }
 }
 
@@ -717,7 +717,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 
 .content-first {
-  background-image: url(../../img/png/city-two.png);
+  background-image: url(./../img/png/city-two.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -785,7 +785,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 
 .content-second {
-  background-image: url(../../img/png/city-one.png);
+  background-image: url(./../img/png/city-one.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -976,7 +976,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 
 .content-fourth {
-  background-image: url(../../img/png/city-three.png);
+  background-image: url(./../img/png/city-three.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1046,7 +1046,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 
 .content-fiveth {
-  background-image: url(../../img/webp/city-four.webp);
+  background-image: url(./../img/webp/city-four.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1146,7 +1146,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 
 .content-sixth {
-  background-image: url(../../img/webp/town.webp);
+  background-image: url(./../img/webp/town.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1183,7 +1183,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 
 @media screen and (max-width: 767px) {
   .content-first {
-    background-image: url(../../img/png/city-two.png);
+    background-image: url(./../img/png/city-two.png);
   }
   .content-first__block {
     display: block;
@@ -1193,7 +1193,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     margin-right: auto;
   }
   .content-second {
-    background-image: url(../../img/png/city-one.png);
+    background-image: url(./../img/png/city-one.png);
   }
   .content-second__block {
     display: block;
@@ -1212,7 +1212,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     height: auto;
   }
   .content-fourth {
-    background-image: url(../../img/png/city-three.png);
+    background-image: url(./../img/png/city-three.png);
   }
   .content-fourth__block {
     display: block;
@@ -1222,7 +1222,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     margin-right: auto;
   }
   .content-fiveth {
-    background-image: url(../../img/webp/city-four.webp);
+    background-image: url(./../img/webp/city-four.webp);
   }
   .content-fiveth__block {
     display: block;
@@ -1237,7 +1237,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     height: 830px;
   }
   .content-first {
-    background-image: url(../../img/png/city-two.png);
+    background-image: url(./../img/png/city-two.png);
   }
   .content-first__block {
     display: flex;
@@ -1246,7 +1246,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     flex-wrap: wrap;
   }
   .content-second {
-    background-image: url(../../img/png/city-one.png);
+    background-image: url(./../img/png/city-one.png);
   }
   .content-second__block {
     display: flex;
@@ -1261,7 +1261,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     flex-wrap: wrap;
   }
   .content-fourth {
-    background-image: url(../../img/png/city-three.png);
+    background-image: url(./../img/png/city-three.png);
   }
   .content-fourth__block {
     display: flex;
@@ -1270,7 +1270,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     flex-wrap: wrap;
   }
   .content-fiveth {
-    background-image: url(../../img/webp/city-four.webp);
+    background-image: url(./../img/webp/city-four.webp);
   }
   .content-fiveth__block {
     display: flex;
@@ -1281,7 +1281,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 @media screen and (min-width: 1100px) {
   .content-first {
-    background-image: url(../../img/png/city-two.png);
+    background-image: url(./../img/png/city-two.png);
   }
   .content-first__block {
     display: flex;
@@ -1289,7 +1289,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     align-items: flex-start;
   }
   .content-second {
-    background-image: url(../../img/png/city-one.png);
+    background-image: url(./../img/png/city-one.png);
   }
   .content-second__block {
     display: flex;
@@ -1302,7 +1302,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     align-items: flex-start;
   }
   .content-fourth {
-    background-image: url(../../img/png/city-three.png);
+    background-image: url(./../img/png/city-three.png);
   }
   .content-fourth__block {
     display: flex;
@@ -1310,7 +1310,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     align-items: flex-start;
   }
   .content-fiveth {
-    background-image: url(../../img/webp/city-four.webp);
+    background-image: url(./../img/webp/city-four.webp);
   }
   .content-fiveth__block {
     display: flex;

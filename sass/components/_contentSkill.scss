@@ -87,7 +87,7 @@
 }
 
 .content-first {
-    background-image: url(../../img/png/city-two.png);
+    background-image: url(./../img/png/city-two.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
@@ -163,7 +163,7 @@
 
 
 .content-second {
-    background-image: url(../../img/png/city-one.png);
+    background-image: url(./../img/png/city-one.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -376,7 +376,7 @@
 
 
 .content-fourth {
-    background-image: url(../../img/png/city-three.png);
+    background-image: url(./../img/png/city-three.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -476,7 +476,7 @@
 
 
 .content-fiveth {
-    background-image: url(../../img/webp/city-four.webp);
+    background-image: url(./../img/webp/city-four.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -591,7 +591,7 @@
 
 
 .content-sixth {
-    background-image: url(../../img/webp/town.webp);
+    background-image: url(./../img/webp/town.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -635,7 +635,7 @@
 @media screen and (max-width: $mob) {
 
    .content-first {
-        background-image: url(../../img/png/city-two.png);
+        background-image: url(./../img/png/city-two.png);
     
         &__block {
             display: block;
@@ -647,7 +647,7 @@
     }
 
     .content-second {
-        background-image: url(../../img/png/city-one.png);
+        background-image: url(./../img/png/city-one.png);
     
         &__block {
             display: block;
@@ -671,7 +671,7 @@
     }
  
     .content-fourth {
-        background-image: url(../../img/png/city-three.png);
+        background-image: url(./../img/png/city-three.png);
     
         &__block {
             display: block;
@@ -683,7 +683,7 @@
     } 
     
     .content-fiveth {
-        background-image: url(../../img/webp/city-four.webp);
+        background-image: url(./../img/webp/city-four.webp);
     
         &__block {
             display: block;
@@ -702,7 +702,7 @@
     }
 
     .content-first {
-        background-image: url(../../img/png/city-two.png);
+        background-image: url(./../img/png/city-two.png);
     
         &__block {
             @include fc;
@@ -711,7 +711,7 @@
     }
 
     .content-second {
-        background-image: url(../../img/png/city-one.png);
+        background-image: url(./../img/png/city-one.png);
     
         &__block {
             @include fc;
@@ -727,7 +727,7 @@
     }
  
     .content-fourth {
-        background-image: url(../../img/png/city-three.png);
+        background-image: url(./../img/png/city-three.png);
     
         &__block {
             @include fc;
@@ -736,7 +736,7 @@
     } 
     
     .content-fiveth {
-        background-image: url(../../img/webp/city-four.webp);
+        background-image: url(./../img/webp/city-four.webp);
     
         &__block {
             @include fc;
@@ -755,7 +755,7 @@
 @media screen and (min-width: $desk) { 
 
     .content-first {
-        background-image: url(../../img/png/city-two.png);
+        background-image: url(./../img/png/city-two.png);
     
         &__block {
             display: flex;
@@ -765,7 +765,7 @@
     }
 
     .content-second {
-        background-image: url(../../img/png/city-one.png);
+        background-image: url(./../img/png/city-one.png);
     
         &__block {
             display: flex;
@@ -783,7 +783,7 @@
     }
  
     .content-fourth {
-        background-image: url(../../img/png/city-three.png);
+        background-image: url(./../img/png/city-three.png);
     
         &__block {
             display: flex;
@@ -793,7 +793,7 @@
     } 
     
     .content-fiveth {
-        background-image: url(../../img/webp/city-four.webp);
+        background-image: url(./../img/webp/city-four.webp);
     
         &__block {
             display: flex;

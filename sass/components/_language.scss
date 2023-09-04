@@ -5,15 +5,15 @@
     height: 95vh;
 
     @media screen and (max-width: $mob) and (orientation: portrait)  {
-        background-image: url(../../img/png/World_map_Globe_Map.png);
+        background-image: url(./../img/png/World_map_Globe_Map.png);
     }
 
     @media screen and (max-width: $mob) and (orientation: landscape) {
-        background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);        
+        background-image: url(./../img/png/gray_and_black_map_screenshot_alpha.png);        
     }
 
     @media screen and (min-width: $tab-st) {
-        background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);        
+        background-image: url(./../img/png/gray_and_black_map_screenshot_alpha.png);        
     }
 }
 
