@@ -1,0 +1,273 @@
+// Content in block about skill
+
+.skill {
+    &__mark:hover .first, &__mark:focus .first {
+        color: $link-color;
+    }
+
+    &__mark:hover .second, &__mark:focus .second {
+        animation: AnimText 8s linear 0s 1 normal forwards; 
+        animation-iteration-count: infinite;
+        color: $primary-color;
+    }
+
+    &__mark:hover .animation__block-one, &__mark:focus .animation__block-one {
+        animation: AnimSecond 8s linear 0s 1 normal forwards;
+        animation-iteration-count: infinite; 
+    }
+
+    &__mark:hover .third, &__mark:focus .third {
+        color: $hover-color;
+        opacity: 1;  
+
+        & .skill__mark__txt__block-one, & .skill__mark__txt__block-two {
+            translate: 0px 0px;   
+        } 
+    }
+
+    &__mark:hover .third + .skill__mark__title, &__mark:focus .third + .skill__mark__title {
+        opacity: 0;
+    }
+
+    &__mark:hover .fourth, &__mark:focus .fourth {
+        color: $select-color;
+        opacity: 1;        
+    }
+
+    &__mark:hover .fiveth, &__mark:focus .fiveth {
+        color: $second-color;
+        // color: $focus-color;
+        opacity: 1;
+        translate: 0px 0px;           
+    }
+
+    &__mark:hover .sixth, &__mark:focus .sixth {
+        color: $secondary-color;
+        // color: $focus-color;
+        opacity: 1;
+		transform: rotate(0) scale(1);   
+    }
+}
+
+
+
+.skill__mark {
+	&__picture {
+		width: $width-block;
+		height: $height-block;
+		cursor: inherit;
+	}
+
+    &__title {
+        position: absolute;
+        top: 5px;
+        left: 30px;
+        cursor: inherit;
+        padding: 3px;
+        color: $title-color;
+        @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+        opacity: 1;
+        transition: opacity linear 150ms;
+    }
+
+	&__txt {
+        position: absolute;
+		cursor: inherit;
+        transition: color linear 250ms;
+        padding: 10px;
+
+        &.first {
+            bottom: -5px;
+            left: 15px;
+            @include font($fw: 400, $fs: 14px, $lh: 1.2, $ls: 0.03em);   
+            color: $first-color;
+        }
+
+        &.second {
+            top: 25px;
+            left: 20px;
+            @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+            color: inherit; 
+            // animation: AnimText 8s linear 2s 1 normal forwards;  
+            // animation-iteration-count: infinite;       
+        }
+
+        &.third {
+            @include fc;
+            flex-flow: column;
+            gap: 3px;
+            opacity: 0;
+            top: 0px;
+            left: 0px;
+            width: $width-block;
+            height: $height-block;
+            background-color: rgba(0, 0, 0, $alpha: 0.70);
+            @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+            transition: opacity linear 250ms;
+            color: $hover-color;               
+        }       
+
+        // That's for centered block
+        // &__block {
+        //     padding: 3px; // That's for old browser, where not support "gap" in third block;
+        //     cursor: inherit;
+        // }
+
+        &__block-one {
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            cursor: inherit;
+            padding: 3px;
+            translate: -320px 0px;
+            transition: translate linear 750ms;
+        }
+
+        &__block-two {
+            font-size: 13px;
+            position: absolute;
+            bottom: 5px;
+            left: 55px;
+            cursor: inherit;
+            padding: 3px;
+            translate: 320px 0px;
+            transition: translate linear 750ms;
+        }
+
+        &.fourth {
+            @include fc;
+            gap: 3px;
+            opacity: 0;
+            top: 0px;
+            left: 0px;
+            width: $width-block;
+            height: $height-block;
+            background-color: rgba(0, 0, 0, $alpha: 0.8);
+            @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+            transition: opacity linear 500ms;
+            color: $select-color;               
+        }    
+
+        &.fiveth {
+            position: absolute;
+            @include fc;
+            flex-flow: column;
+            gap: 3px;
+            opacity: 1; //use "1" - to off, "0" to on;
+            top: 0px;
+            left: 0px;
+            width: $width-block;
+            height: $height-block;
+            background-color: rgba(0, 0, 0, $alpha: 0.5);
+            @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+            translate: 0px $height-block;   
+            transition: opacity linear 250ms, translate linear 750ms;
+            color: $second-color;      
+            // color: $focus-color;               
+        }    
+
+        &.sixth {
+            @include fc;
+            flex-flow: column;
+            gap: 3px;
+            opacity: 0;
+            top: 0px;
+            left: 0px;
+            width: $width-block;
+            height: $height-block;
+            background-color: rgba(255, 255, 255, $alpha: 0.7);
+            @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em);
+            transform: rotate(-540deg) scale(0);
+            transition: opacity linear 250ms, transform linear 750ms;
+            color: $secondary-color;      
+            // color: $focus-color;               
+        }    
+	}
+
+	&__button {
+        position: relative;
+		width: $width-block;
+		height: $height-block;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+		background-color: inherit;	
+		cursor: pointer;
+        color: inherit;
+	} 
+}
+
+
+// Animation in second block
+.animation__block-one {
+
+     @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
+        background-image: url(../../img/jpg/chip_shema_dark_opt.jpg);
+     }
+
+    // animation: AnimSecond 8s linear 2s 1 normal forwards;  
+    // animation-iteration-count: infinite;
+    // animation-timing-function: ease;
+
+    background-position: top top;
+    background-size: 150%;
+}
+
+@keyframes AnimSecond {
+	0% {
+		background-position: top top;
+		background-size: 150%;
+	}
+
+	50% {
+		background-position: right top;
+		background-size: 100%;
+	}
+
+    100% {
+		background-position: top top;
+		background-size: 150%;
+	}
+}
+
+@keyframes AnimText {
+	0% {
+        transform: scaleX(1);
+	}
+
+	50% {
+        transform: scaleX(0);
+	}
+
+    100% {
+        transform: scaleX(1);
+	}
+}
+
+
+
+// Animation in fourth block
+.animation__block-two {
+    @media screen and (min-device-pixel-ratio: 1), screen and (-webkit-min-device-pixel-ratio: 1), screen and (min-resolution: 96dpi), screen and (min-resolution: 1dppx) {
+    background-image: url(../../img/jpg/string_remake_opt.jpg);
+    }
+    
+    animation: AnimFourth 38s linear 2s 1 normal forwards;  
+    animation-iteration-count: infinite;
+    // animation-timing-function: ease;
+}
+
+
+@keyframes AnimFourth {
+	0% {
+		background-position: 50% 0%;
+	}
+
+	50% {
+		background-position: 50% 200%;
+	}
+
+    100% {
+		background-position: 50% 0%;
+	}
+}

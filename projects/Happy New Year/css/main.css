@@ -1,0 +1,764 @@
+@charset "UTF-8";
+/* modern-normalize v1.1.0 | MIT License | https: //github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+:root {
+  --body-color: ;
+  --link-color: ;
+  --select-color: ;
+  --hover-color: ;
+  --focus-color: ;
+  --header-color: ;
+  --text-color: #ffffff;
+  --title-color: ;
+  --button-color: ;
+  --icon-color: ;
+  --border-color: rgb(210, 199, 105);
+  --width-page: 100%; /* 1200px */
+}
+
+@font-face {
+  font-family: "Papyrus";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Papyrus"), url("/fonts/Papyrus.TTF"), local("Arial");
+}
+body {
+  background-image: url(../img/gif/UTeC.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 98.5vh;
+}
+@media screen and (min-width: 768px) {
+  body {
+    /* font-family: Arial, Helvetica, sans-serif;*/
+    font-family: "Papyrus", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  body .mob-front {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    /* font-family: Arial, Helvetica, sans-serif;*/
+    font-family: "Papyrus", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  body .mob-front {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/*Маркер списка и сброс*/
+.mark, li {
+  list-style: none;
+}
+
+.none {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+p, h1, h2, h3, ul, li {
+  padding: 0px;
+  margin: 0px;
+  cursor: default;
+}
+
+@media screen and (max-width: 767px) {
+  .replay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    width: 100px;
+    color: var(--text-color);
+    transition: color linear 250ms, box-shadow linear 250ms;
+    animation: replay 123s ease 0s 1 normal forwards;
+  }
+  .replay:hover, .replay:focus {
+    color: var(--border-color);
+    /* material shadow v1     border-radius: 0px 0px 0px 0px; */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.22), 0px 1px 1px rgba(0, 0, 0, 0.34), 0px 2px 1px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .replay:hover .replay__icon, .replay:focus .replay__icon {
+    fill: var(--border-color);
+  }
+  .replay__icon {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
+    transition: fill linear 250ms 0ms;
+  }
+}
+@media screen and (min-width: 768px) {
+  .replay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    width: 120px;
+    color: var(--text-color);
+    transition: color linear 250ms, box-shadow linear 250ms;
+    animation: replay 123s ease 0s 1 normal forwards;
+  }
+  .replay:hover, .replay:focus {
+    color: var(--border-color);
+    /* material shadow v1     border-radius: 0px 0px 0px 0px; */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.22), 0px 1px 1px rgba(0, 0, 0, 0.34), 0px 2px 1px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .replay:hover .replay__icon, .replay:focus .replay__icon {
+    fill: var(--border-color);
+  }
+  .replay__icon {
+    margin-left: 5px;
+    width: 28px;
+    height: 28px;
+    fill: var(--text-color);
+    transition: fill linear 250ms 0ms;
+  }
+}
+.info {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  animation: replay 123s ease 0s 1 normal forwards;
+}
+
+@media screen and (min-width: 768px) {
+  main .title {
+    display: block;
+    margin-left: calc(var(--width-page) / 1.9);
+    margin-top: 20px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+  }
+  main .wishes {
+    display: block;
+    margin-left: calc(var(--width-page) / 2.2);
+    margin-top: 20px;
+    padding-right: 10px;
+  }
+  main .form {
+    margin-left: calc(var(--width-page) / 2.2);
+    margin-top: 40px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: form 30s ease 0s 1 normal forwards;
+  }
+  main .form__label_checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px) {
+  main {
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+  }
+  main .title {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+  }
+  main .wishes {
+    display: block;
+    margin-top: 10px;
+  }
+  main .form {
+    margin-left: 10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: form 30s ease 0s 1 normal forwards;
+  }
+  main .form__label_checkbox {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  main .form__label_text {
+    font-family: "Papyrus", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+}
+
+.wishes__one {
+  padding-top: 10px;
+  padding-right: 10px;
+  animation: wishes__one 5s ease 0s 1 normal forwards;
+}
+.wishes__two {
+  padding-top: 10px;
+  padding-right: 10px;
+  animation: wishes__two 10s ease 0s 1 normal forwards;
+}
+.wishes__three {
+  padding-top: 10px;
+  padding-right: 10px;
+  animation: wishes__three 15s ease 0s 1 normal forwards;
+}
+.wishes__four {
+  padding-top: 10px;
+  padding-right: 10px;
+  animation: wishes__four 20s ease 0s 1 normal forwards;
+}
+.wishes__five {
+  padding-top: 10px;
+  padding-right: 10px;
+  animation: wishes__five 25s ease 0s 1 normal forwards;
+}
+
+.form__label {
+  display: flex;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.form__label_text {
+  transition: color linear 250ms 0ms;
+  padding-right: 10px;
+  fill: var(--text-color);
+}
+.form__label_checkbox:checked + .form__label_text {
+  color: var(--border-color);
+  fill: var(--border-color);
+}
+.form__label_icon {
+  width: 18px;
+  height: 18px;
+  transition: fill linear 250ms 0ms;
+  margin-left: 5px;
+  fill: inherit;
+}
+.form__send {
+  margin-top: 10px;
+  width: 300px;
+  padding: 5px;
+  cursor: pointer;
+  transition: shadow linear 250ms 0ms;
+  background-color: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  color: var(--text-color);
+  transition: color linear 250ms, box-shadow linear 250ms;
+}
+.form__send:hover {
+  /* material shadow v1     border-radius: 0px 0px 0px 0px; */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.22), 0px 1px 1px rgba(0, 0, 0, 0.34), 0px 2px 1px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--border-color);
+}
+
+@keyframes replay {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  99% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+@keyframes wishes__one {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wishes__two {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wishes__three {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wishes__four {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wishes__five {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes form {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  80% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: opacity linear 250ms, z-index linear 250ms;
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    display: block;
+  }
+}
+
+.modal__text-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  letter-spacing: 0.03em;
+  color: var(--border-color);
+  transition: color linear 250ms 0ms;
+}
+.modal__text-up-white {
+  color: var(--text-color);
+}
+.modal__text-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  color: var(--border-color);
+  transition: color linear 250ms 0ms;
+}
+.modal__close {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+  padding: 5px 10px;
+  transition: border-color linear 250ms, color linear 250ms;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0);
+}
+.modal__close:hover {
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  color: var(--border-color);
+}
+
+.focus {
+  z-index: 1;
+  opacity: 1;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.window__snow {
+  width: 100%;
+  height: 100%;
+  background-image: url("/snow/snow_1.png"), url("/snow/snow_2.png"), url("/snow/snow_3.png");
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}/*# sourceMappingURL=main.css.map */

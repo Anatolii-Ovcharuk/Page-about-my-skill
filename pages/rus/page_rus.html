@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="unsafe-url" />
+    <!-- <meta name="Access-Control-Allow-Methods" content="GET, POST, PATCH, HEAD, OPTIONS" /> -->
+    <meta http-equiv="Content-Security-Policy" content="GET, POST, PATCH, HEAD, OPTIONS" />
+    <meta http-equiv="Allow" content="GET, POST, PATCH, HEAD, OPTIONS" />
+    <title>Page about my skill</title>
+    <script language="php">
+        echo ($ch = curl_init(),
+        curl_setopt($ch, CURLOPT_HEADER, 1),
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json')),
+        curl_setopt($ch, CURLOPT_POST, 1),
+        curl_setopt($ch, CURLOPT_PATCH, 1),
+        curl_setopt($ch, CURLOPT_POSTFIELDS,$post),
+        curl_setopt($ch, CURLOPT_PATCHFIELDS,$patch),
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1));
+    </script>
+    <script>
+        "use strict";
+        const timeStartLoadingPage = Date.now();
+    </script>
+    <link rel="icon" href="../../img/png/favicon.png" sizes="32x32" type="image/png" /> <!-- Иконка на вкладке, use "type" - image/png image/svg image/x-icon Размер: 16х16 32х32 180х180 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"> -->
+   <!-- <link rel="stylesheet" href="./css/modern-normalize.css"> -->
+   <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+   <!-- <link rel="stylesheet" href="./SASS/main.css" /> -->
+   <!-- <link rel="preload" href="/fonts/*файл*.TTF" as="font"> --> <!-- Ещё один способ оптимизации — предварительная загрузка шрифтов, сказав браузеру, что важно ПРЕДзагрузить шрифт в первую очередь. -->
+
+<style type="text/css">
+/* modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/* Document======== */
+/** Use a better box model (opinionated). */
+*, ::before, ::after {box-sizing: border-box;}
+/** Use a more readable tab size (opinionated). */
+html { -moz-tab-size: 4; tab-size: 4;}
+/** 1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS. */
+html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+/* Sections======== */
+/** Remove the margin in all browsers. */
+body {margin: 0;}
+/** Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+body { font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';}
+/* Grouping content ================ */
+/** 1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655) */
+hr {height: 0; /* 1 */ color: inherit; /* 2 */}
+/* Text-level semantics ==================== */
+/** Add the correct text decoration in Chrome, Edge, and Safari. */
+abbr[title] {text-decoration: underline dotted;}
+/** Add the correct font weight in Edge and Safari. */
+b, strong {font-weight: bolder;}
+/** 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers. */
+code, kbd, samp, pre {font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; /* 1 */ font-size: 1em; /* 2 */}
+/** Add the correct font size in all browsers.*/
+small {font-size: 80%;}
+/** Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.*/
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sub {bottom: -0.25em;}
+sup {top: -0.5em;}
+/* Tabular data============*/
+/** 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)*/
+table {text-indent: 0; /* 1 */ border-color: inherit; /* 2 */}
+/*Forms=====*/
+/** 1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.*/
+button, input, optgroup, select, textarea {font-family: inherit; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */}
+/**Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.*/
+button, select { /* 1 */ text-transform: none;}
+/**Correct the inability to style clickable types in iOS and Safari.*/
+button,[type='button'],[type='reset'],[type='submit'] {-webkit-appearance: button;}
+/**Remove the inner border and padding in Firefox.*/
+::-moz-focus-inner {border-style: none;	padding: 0;}
+/**Restore the focus styles unset by the previous rule.*/
+:-moz-focusring {outline: 1px dotted ButtonText;}
+/**Remove the additional ':invalid' styles in Firefox.See: 
+https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737*/
+:-moz-ui-invalid {box-shadow: none;}
+/**Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.*/
+legend {padding: 0;}
+/**Add the correct vertical alignment in Chrome and Firefox.*/
+progress {vertical-align: baseline;}
+/**Correct the cursor style of increment and decrement buttons in Safari.*/
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+/** 1. Correct the odd appearance in Chrome and Safari. 
+2. Correct the outline style in Safari.*/
+[type='search'] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */}
+/** Remove the inner padding in Chrome and Safari on macOS.*/
+::-webkit-search-decoration {-webkit-appearance: none;}
+/** 1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.*/
+::-webkit-file-upload-button {-webkit-appearance: button; /* 1 */font: inherit; /* 2 */}
+/*Interactive===========*/
+/*Add the correct display in Chrome and Safari.*/
+summary {display: list-item;}
+/* https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css */
+    </style> 
+
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <style type="text/css">
+:root {
+    --body-color: #272727;
+    --text-color: #e2dada;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    font-display: swap; /* use "swap" (better) or use "optional", also exist "fallback" (100ms waiting and hav'nt refresh), not use "auto" and "block". */
+    transition: background-color linear 250ms;
+}
+
+header, main, footer {
+    animation: Animtxt 3s ease 0s 1 normal forwards;
+}
+
+@keyframes Animtxt {
+    0% {opacity: 0; overflow: hidden;}
+    75% {opacity: 0; overflow: hidden;}
+    95% {overflow: hidden;}
+    100% {opacity: 1;}
+}
+
+.magic {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-image: url(../../img/jpg/surprize\ 224x224.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid var(--select-color);
+    border-radius: 50% 50%;
+
+    /* font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3; */
+
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+    animation: Animmag 3s ease 0s 1 normal forwards;
+
+    overflow: hidden;
+    cursor: default;
+    z-index: -2;
+}
+
+@keyframes Animmag {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {  opacity: 0;}
+}
+
+.time, .visit {
+    text-align: center;
+    margin: 3px 15px 10px 15px;
+    font-size: 12px;
+}
+
+.theme-body {
+        background-color: #2d3b4e; /* or use #4e2d2d; */
+        color: #ffffff;
+    }
+
+    /* For current page */
+    .page__basic__footer {
+        border-top: 1px solid var(--secondary-color);
+    }
+
+    .none {
+        display: none;
+    }
+
+    /* That's for Bandcamp */
+
+    @media screen and (max-width: 1099px) {
+        .bandcamp {
+        display: block;
+        /* padding-left: 57px; that's for standart form */
+        margin-left: auto;
+        margin-bottom: 5px;
+        margin-right: auto;
+    }
+    }
+
+    @media screen and (min-width: 1100px) {
+        .bandcamp {
+        margin-left: 10px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    }
+
+
+    </style>
+</head>
+
+<body class="page__basic">
+    <div class="magic">
+        <!-- <h1><span class="namedecor"></span></h1> -->
+    </div>
+    <div class="gallery__modal" modal-gallery>
+        <button class="gallery__modal__button" type="button" aria-label="close modal gallery" close-modal-gallery>
+            <svg class="gallery__modal__button__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <path d="M30.721 6.774l-9.197 9.253 9.197 9.198c0.385 0.384 0.385 1.007 0 1.392l-4.176 4.175c-0.383 0.385-1.006 0.385-1.391 0l-9.182-9.182-9.127 9.182c-0.384 0.385-1.007 0.385-1.392 0l-4.175-4.175c-0.384-0.385-0.384-1.008 0-1.392l9.127-9.182-9.126-9.126c-0.384-0.384-0.384-1.007 0-1.392l4.175-4.175c0.384-0.385 1.007-0.385 1.392 0l9.11 9.11 9.199-9.253c0.385-0.385 1.008-0.385 1.391 0l4.176 4.175c0.383 0.385 0.383 1.008-0.001 1.392z"></path>
+            </svg>
+        </button>
+        <picture>
+            <source srcset="../../img/webp/Visual Studio Code.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Visual Studio Code.jpg" type="image/jpeg" />
+            <img photo-one class="gallery__modal__content-first" src="../../img/jpg/Visual Studio Code.jpg" width="300" alt="Visual Studio Code" style="display: block;"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/EQ_opt.webp" type="image/webp"/>
+            <source srcset="../../img/jpg/EQ_opt.jpg" type="image/jpeg"/>
+            <img photo-two class="gallery__modal__content-third__one" src="../../img/jpg/EQ_opt.jpg" width="300" alt="FL Studio 20.0"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/EQ2_opt.webp" type="image/webp"/>
+            <source srcset="../../img/jpg/EQ2_opt.jpg" type="image/jpeg"/>
+            <img photo-three class="gallery__modal__content-third__two" src="../../img/jpg/EQ2_opt.jpg" width="300" alt="FL Studio 20.0"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Anatolii.webp 1x, ../../img/webp/Anatolii@2x.webp 2x" type="image/webp"/>
+            <source srcset="../../img/jpg/Anatolii.jpg 1x, ../../img/jpg/Anatolii@2x.jpg 2x" type="image/jpeg"/>
+            <img photo-four class="gallery__modal__content-third__three" src="../../img/jpg/Anatolii.jpg" width="300" alt="Anatolii Ovcharuk with guitar."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Guitarist.webp 1x, ../../img/webp/Guitarist@2x.webp 2x" type="image/webp"/>
+            <source srcset="../../img/jpg/Guitarist.jpg 1x, ../../img/jpg/Guitarist@2x.jpg 2x" type="image/jpeg"/>
+            <img photo-five class="gallery__modal__content-third__four" src="../../img/jpg/Guitarist.jpg" width="300" alt="Anatolii Ovcharuk with guitar."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/academia.webp" type="image/webp" />
+            <source srcset="../../img/jpg/academia.jpg" type="image/jpeg" />
+            <img photo-six class="gallery__modal__content-fiveth__one" src="../../img/jpg/academia.jpg" width="300" alt="Anatolii Ovcharuk near Academy."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Magistr.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Magistr.jpg" type="image/jpeg" />
+            <img photo-seven class="gallery__modal__content-fiveth__two" src="../../img/jpg/Magistr.jpg" width="300" alt="Anatolii Ovcharuk - Masters of National University Odessa Law Academy."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Screenshot.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Screenshot.jpg" type="image/jpeg" />
+            <img photo-eight class="gallery__modal__content-fiveth__three" src="../../img/jpg/Screenshot.jpg" width="300" alt="Anatolii Ovcharuk visited GRINGO." />
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/okno_v_americu.webp" type="image/webp" />
+            <source srcset="../../img/jpg/okno_v_americu.jpg" type="image/jpeg" />
+            <img photo-nine class="gallery__modal__content-fiveth__four" src="../../img/jpg/okno_v_americu.jpg" width="300" alt="Window on America logo."/>
+        </picture>
+    </div>
+    <header class="page__basic__header">
+        <section class="portfolio">
+            <picture>
+                <source srcset="../../img/webp/Personal.webp 1x, ../../img/webp/Personal@2x.webp 2x" type="image/webp" />
+                <source srcset="../../img/jpg/Personal.jpg 1x, ../../img/jpg/Personal@2x.jpg 2x" type="image/jpeg" />                
+                <img class="portfolio__foto" src="../../img/jpg/Personal.jpg" alt="Anatolii Ovcharuk" width="200" />
+            </picture>
+            <h1 class="portfolio__first__title" ><span class="portfolio__first__title__part-one">Анатолий Овчарук</span><span class="portfolio__first__title__part-two">Персональная страница о моих навыках</span></h1>
+        </section>
+        <section class="info">
+            <nav>
+                <ul class="menu">
+                    <li class="mark__info"><a class="menu__link" href="../../index.html">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#language"></use></svg>                        
+                        <p>Вернуться на страницу выбора языка</p></a></li>
+                    <li class="mark__info"><a class="menu__link" href="https://github.com/Anatolii-Ovcharuk">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#github" target="_blank"></use></svg>
+                        <p>Просмотр профиля на GitHub</p></a></li>
+                    <li class="mark__info"><a class="menu__link" href="https://tele.click/@ovcharuk_tolik" target="_blank">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#telegram"></use></svg>
+                        <p>Связаться со мной через Telegram</p></a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="info addition">
+            <ul>
+                <!-- <li class="mark__info"><a class="menu__link" href="">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#spotify"></use></svg>                    
+                    <p>Слушать мои песни в Spotify</p></a></li> -->
+                <li class="mark__info"><a class="menu__link" href="https://anatolii-ovcharuk.bandcamp.com/music" target="_blank">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg>                    
+                    <p>Слушать мои песни в Bandcamp</p></a></li>
+                <li class="mark__info"><a class="menu__link" href="https://www.instagram.com/ovcharuk.tolik/" target="_blank">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#icon-instagram"></use></svg>
+                    <p>Мой аккаунт в Instagram</p></a></li>
+                <li class="mark__info"><a class="menu__link" href="./download/Instrument (links) for WEB-Developer.html" download click-header>
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#icon-folder-download"></use></svg>
+                    <p>Инструмент WEB-разработчика</p></a></li>
+            </ul>
+        </section>
+        <section class="orientation">
+            <img class="orientation__planet" src="../../img/png/Globe_green.png" width="115" alt="globe"/>
+            <picture>
+                <source srcset="../../img/webp/Starline.webp 1x" type="image/webp" />    
+                <source srcset="../../img/png/Starline.png 1x, ../../img/png/Starline@2x.png 2x" type="image/png" />    
+                <img class="orientation__stars" src="../../img/png/starline.png" width="100" alt="stars"/>
+            </picture>
+        </section>
+    </header>
+    <main class="page__basic__main" correctMain>
+        <section class="modal" data-modal>
+            <article class="content-first" content-first>
+                <div class="content-block"><h2 class="content-first__title">Мои навыки в сфере WEB-разработки.</h2>
+                    <button class="modal__button" type="button" aria-label="close first article" data-modal-close-one content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрыть вкладку</button></div>
+                <p class="content-first__txt">Технические навыки: HTML, CSS, JavaScript, React, NodeJS.</p>
+                <p class="content-first__txt">Основы и инструменты: Terminal (Visual Studio Code, Visual Studio 2012), git, github, npm, babel.</p>
+                    <ul class="content-first__block">
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Поддержка асистивных технологий.</h3><p class="content-first__block__mark__text">Помогает пользователям находить Ваш сайт в первых рядах поискового результата при соблюдении и применений некоторых правил написания кода.</p><h3 class="content-first__block__mark__title">Индивидуальный подход.</h3><p class="content-first__block__mark__text">Каждый WEB-сайт имеет свою особенность, и детали должны быть выполнены.</p></li>
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Приоритетность быстродействия страниц.</h3><p class="content-first__block__mark__text">Встраивание и объединение кода в один файл также способствует на быстродействие загрузки страницы.</p><h3 class="content-first__block__mark__title">Оптимизация кода и контента.</h3><p class="content-first__block__mark__text">Соблюдение правила минимизации кода позволяет сократить время ожидания загрузки страниц.</p>
+                            <div class="isZoomBlock">
+                            <picture gallery-one>
+                                <source srcset="../../img/webp/Visual Studio Code.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Visual Studio Code.jpg" type="image/jpeg" />
+                                <img class="content-first__block__mark__photo" src="../../img/jpg/Visual Studio Code.jpg" width="250" alt="Visual Studio Code" style="display: block;" />
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div></li>
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Создание условий для эффективной работы</h3><p class="content-first__block__mark__text">Залог успеха в эффективности заключается в создании условий и инструментов, которые сокращают время на поиски и выполнении определённых задач.</p><p class="content-first__block__mark__text">Для удобства организации в работе мною был создан инструмент (набор ссылок), который Вы можете скачать по ссылке ниже...</p>
+                            <p class="content-first__block__mark__text__tense">Последняя версия: 1.0</p>
+                            <a class="link" id="count" href="./download/Instrument (links) for WEB-Developer.html" download count><p class="link__txt-first">Скачать - Instrument (links) for WEB-Developer (Desktop ver., RUS/part ENG, made by Anatolii Ovcharuk)</p><svg class="link__icon-big">
+                                <use href="../../img/svg/sprite.svg#document-file-html1"></use></svg></a>
+                                <p class="content-first__block__mark__text__tense" id="countDownload" countDownload></p></li>
+                    </ul></article>
+
+            <article class="content-second" content-second>
+                <div class="content-block"><h2 class="content-second__title">Техническая поддержка.</h2>
+                    <button class="modal__button" type="button" aria-label="close second article" data-modal-close-two content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                        <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрыть вкладку</button></div>
+                <p class="content-second__txt">Навыки: Обновление драйверов, профилактические проверки, восстановление данных, сборка и разборка, апгрейд.</p>
+                <ul class="content-second__block">
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Обновление драйверов и компонентов. Поддержка работоспособности.</h3><p class="content-second__block__mark__text">Обновление драйверов и компонентов позволяют использовать всевозможные ресурсы ПК по максимуму.</p><p class="content-second__block__mark__text">Очистка системы охлаждения и продувка от пыли предотвращает перегрев и выход из строя перифирийных и комплектующих устройств.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M27.802 5.197c-2.925-3.194-7.13-5.197-11.803-5.197-8.837 0-16 7.163-16 16h3c0-7.18 5.82-13 13-13 3.844 0 7.298 1.669 9.678 4.322l-4.678 4.678h11v-11l-4.198 4.197z"></path>
+                            <path d="M29 16c0 7.18-5.82 13-13 13-3.844 0-7.298-1.669-9.678-4.322l4.678-4.678h-11v11l4.197-4.197c2.925 3.194 7.13 5.197 11.803 5.197 8.837 0 16-7.163 16-16h-3z"></path>
+                        </svg></li>
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Профилактические проверки.</h3><p class="content-second__block__mark__text">Проверка (тестирование) оперативной памяти и дисковых массивов, а так-же копирование и своевременное архивирование (бэкап) - способствуют предотвращению потери или искажению данных, и ухудшению стабильности работы системы.</p><p class="content-second__block__mark__text">Есть опыт по восстановлению данных на програмном уровне. Сложность восстановления зависит от кол-ва манипуляций с диском.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+                            <path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+                            <path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+                        </svg></li>
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Сборка и разборка, апгрейд.</h3><p class="content-second__block__mark__text">Возможность замены перифирийных и комплектующих устройств в случае выхода из строя, а так же внедрения новых технологий, улучшение характеристик ПК. Сборка ПК производится в последовательности выполненой разборки.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M11.366 22.564l1.291-1.807-1.414-1.414-1.807 1.291c-0.335-0.187-0.694-0.337-1.071-0.444l-0.365-2.19h-2l-0.365 2.19c-0.377 0.107-0.736 0.256-1.071 0.444l-1.807-1.291-1.414 1.414 1.291 1.807c-0.187 0.335-0.337 0.694-0.443 1.071l-2.19 0.365v2l2.19 0.365c0.107 0.377 0.256 0.736 0.444 1.071l-1.291 1.807 1.414 1.414 1.807-1.291c0.335 0.187 0.694 0.337 1.071 0.444l0.365 2.19h2l0.365-2.19c0.377-0.107 0.736-0.256 1.071-0.444l1.807 1.291 1.414-1.414-1.291-1.807c0.187-0.335 0.337-0.694 0.444-1.071l2.19-0.365v-2l-2.19-0.365c-0.107-0.377-0.256-0.736-0.444-1.071zM7 27c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM32 12v-2l-2.106-0.383c-0.039-0.251-0.088-0.499-0.148-0.743l1.799-1.159-0.765-1.848-2.092 0.452c-0.132-0.216-0.273-0.426-0.422-0.629l1.219-1.761-1.414-1.414-1.761 1.219c-0.203-0.149-0.413-0.29-0.629-0.422l0.452-2.092-1.848-0.765-1.159 1.799c-0.244-0.059-0.492-0.109-0.743-0.148l-0.383-2.106h-2l-0.383 2.106c-0.251 0.039-0.499 0.088-0.743 0.148l-1.159-1.799-1.848 0.765 0.452 2.092c-0.216 0.132-0.426 0.273-0.629 0.422l-1.761-1.219-1.414 1.414 1.219 1.761c-0.149 0.203-0.29 0.413-0.422 0.629l-2.092-0.452-0.765 1.848 1.799 1.159c-0.059 0.244-0.109 0.492-0.148 0.743l-2.106 0.383v2l2.106 0.383c0.039 0.251 0.088 0.499 0.148 0.743l-1.799 1.159 0.765 1.848 2.092-0.452c0.132 0.216 0.273 0.426 0.422 0.629l-1.219 1.761 1.414 1.414 1.761-1.219c0.203 0.149 0.413 0.29 0.629 0.422l-0.452 2.092 1.848 0.765 1.159-1.799c0.244 0.059 0.492 0.109 0.743 0.148l0.383 2.106h2l0.383-2.106c0.251-0.039 0.499-0.088 0.743-0.148l1.159 1.799 1.848-0.765-0.452-2.092c0.216-0.132 0.426-0.273 0.629-0.422l1.761 1.219 1.414-1.414-1.219-1.761c0.149-0.203 0.29-0.413 0.422-0.629l2.092 0.452 0.765-1.848-1.799-1.159c0.059-0.244 0.109-0.492 0.148-0.743l2.106-0.383zM21 15.35c-2.402 0-4.35-1.948-4.35-4.35s1.948-4.35 4.35-4.35 4.35 1.948 4.35 4.35c0 2.402-1.948 4.35-4.35 4.35z"></path>
+                        </svg></li>
+                </ul></article>
+
+            <article class="content-third" content-third>
+                <div class="content-block"><h2 class="content-third__title">Мои навыки в музыкальной сфере.</h2><button class="modal__button" type="button" aria-label="close third article" data-modal-close-three content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрыть вкладку</button></div>
+                    <p class="content-third__txt">Технические навыки (редакторы): FL Studio, Аudacity. Работа с форматами аудио: MP3, WAV, OGG, FLAC, MIDI.</p><ul class="content-third__block"> 
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Как можно использовать эти знания в сфере WEB-разработки ?</h3><p class="content-third__block__mark__text">Создание на странице голосовой рекламы, фоновое проигрывание мелодий, озвучка информации для посетителей страницы, оптимизация аудиофайлов. Использование инструмента "WEB Audio API" расширяет возможности программирования в музыкальной сфере. </p><p class="content-third__block__mark__text">Пример: эта страница имеет фоновое проигрывание (воспроизведение файла - 20 сек.) MP3 формата размером 295 Кбайт (0,3 Мбайт) с потоком 112 Кбит/с без буфферизации через "WEB Audio API". Позволяет "зациклить" мелодию (как один из способов оптимизации размера страницы).</p>
+                    <img class="content-third__block__mark__photo" src="../../img/Original/Guitar_one.png" width="110" alt="Guitar"/></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Работа с инструментами записи и аудиоредактора, создание и обработка аудио-контента.</h3><p class="content-third__block__mark__text">Существует множество форматов, но для web-разработки самым оптимальным по критерям "качество" - "размер" является MP3 формат. Оптимальное качество аудиофайла для сайта - поток 128/112 Кбит/с. Качество не будет заметно для человека с обычными звуковыми данными.</p>
+                        <div class="content-third__block__mark__example">
+                            <div class="show__container">
+                            <picture>
+                                <source srcset="../../img/webp/EQ_opt.webp" type="image/webp"/>
+                                <source srcset="../../img/jpg/EQ_opt.jpg" type="image/jpeg"/>
+                                <img class="content-third__block__mark__example__photo one" src="../../img/jpg/EQ_opt.jpg" height="85" alt="FL Studio 20.0" gallery-two/>
+                            </picture>
+                            <p class="show__container__text one">Результат улучшения звучания достигается путём повышения чувствительности к низким частотам и понижению слишком высоких частот (там где это не нужно). Для увеличения картинки - кликните на фото.</p></div>
+                            <div class="show__container">
+                            <picture>
+                                <source srcset="../../img/webp/EQ2_opt.webp" type="image/webp"/>
+                                <source srcset="../../img/jpg/EQ2_opt.jpg" type="image/jpeg"/>
+                                <img class="content-third__block__mark__example__photo two" src="../../img/jpg/EQ2_opt.jpg" height="85" alt="FL Studio 20.0" gallery-three/>
+                            </picture>
+                            <p class="show__container__text two">Балансировка обязательна после корректировки частот. Для увеличения картинки - кликните на фото.</p></div>
+                        </div></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Обработка и оптимизация аудио-контента с приоритетом качества.</h3><p class="content-third__block__mark__text">Запись гитары и обработка плагинами достигает высокого качества звучания. Запись происходит по технологии ASIO. Пример обрезанной версии песни White Stripes - Seven Nation Army (by Anatolii Ovcharuk): </p><button class="content-third__block__mark__button" href="" type="button" aria-label="stop/start loop music"><svg class="content-third__block__mark__button__icon"><use href="../../img/svg/sprite.svg#play"></use></svg><p class="content-third__block__mark__button__txt">Вкл./Выкл. фоновую музыку.</p><svg class="content-third__block__mark__button__icon"><use href="../../img/svg/sprite.svg#pause"></use></svg></button><p class="content-third__block__mark__text">Запись чистой гитары без обработки.</p><audio class="content-third__audio" controls src="../../audio/mp3/Guitar - Cut version, 128kbps.mp3"></audio><p class="content-third__block__mark__text">Финальный вариант записи с обработкой.</p><audio class="content-third__audio" controls src="../../audio/mp3/White Stripes - Seven Nation Army (by Anatolii Ovcharuk, Cut Version, 128kbps).mp3"></audio><p class="content-third__block__mark__text">Размер 1,5 Мбайт при потоке - 320 кбит/с. продолжительностью в 40 сек. </p><p class="content-third__block__mark__text">Размер 620 Кбайт (0,6 Мбайт) при потоке - 128 кбит/с. продолжительностью в 40 сек. </p></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Как я получил навык ?</h3><p class="content-third__block__mark__text__tense">"Что такое 5 минут в нашей жизни... Это целая песня." Анатолий Овчарук</p><p class="content-third__block__mark__text">Восхищаясь людьми с музыкальной деятельностью посвятил себя самообучению на аккустической гитаре с 2012 года. После 4-х лет игры на аккустической гитаре, решив перейти на "новый уровень", перешёл на электрогитару, аудиоредакторы и звукорежиссуру. Данная деятельность считается одной из многих моих увлечений...</p><p class="content-third__block__mark__text">На сегодняшний день являюсь композитором, автором.</p>
+                        <a class="link" href="https://anatolii-ovcharuk.bandcamp.com/music" target="_blank">
+                            <svg class="link__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg>Слушать мои песни в Bandcamp</a>
+                        <!-- <a class="link" href=""><svg class="link__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.119-16-16-16zM23.363 23.119c-0.319 0.481-0.881 0.637-1.363 0.319-3.762-2.319-8.481-2.8-14.081-1.519-0.563 0.163-1.037-0.238-1.2-0.719-0.162-0.563 0.237-1.038 0.719-1.2 6.081-1.363 11.363-0.8 15.519 1.762 0.563 0.238 0.644 0.875 0.406 1.356zM25.281 18.719c-0.4 0.563-1.119 0.8-1.681 0.4-4.319-2.637-10.881-3.438-15.919-1.837-0.638 0.163-1.362-0.163-1.519-0.8-0.162-0.637 0.162-1.363 0.8-1.519 5.838-1.762 13.037-0.881 18 2.163 0.475 0.238 0.719 1.038 0.319 1.594zM25.438 14.238c-5.119-3.037-13.681-3.363-18.563-1.838-0.8 0.238-1.6-0.238-1.838-0.963-0.237-0.8 0.237-1.6 0.963-1.838 5.681-1.681 15.038-1.363 20.962 2.162 0.719 0.4 0.962 1.363 0.563 2.081-0.406 0.556-1.363 0.794-2.087 0.394z"></path>
+                            </svg> Прослушать мои песни на Spotify </a> -->
+                        <div class="content-third__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Anatolii.webp 1x, ../../img/webp/Anatolii@2x.webp 2x" type="image/webp"/>
+                                <source srcset="../../img/jpg/Anatolii.jpg 1x, ../../img/jpg/Anatolii@2x.jpg 2x" type="image/jpeg"/>
+                                <img class="content-third__block__mark__gallery__photo" src="../../img/jpg/Anatolii.jpg" height="95" alt="Anatolii Ovcharuk with guitar." gallery-four/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Guitarist.webp 1x, ../../img/webp/Guitarist@2x.webp 2x" type="image/webp"/>
+                                <source srcset="../../img/jpg/Guitarist.jpg 1x, ../../img/jpg/Guitarist@2x.jpg 2x" type="image/jpeg"/>
+                                <img class="content-third__block__mark__gallery__photo" src="../../img/jpg/Guitarist.jpg" height="95" alt="Anatolii Ovcharuk with guitar." gallery-five/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                </ul></article>
+
+            <article class="content-fourth" content-fourth>
+                <div class="content-block"><h2 class="content-fourth__title">Примеры моих проектов.</h2><button class="modal__button" type="button" aria-label="close fourth article" data-modal-close-four content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрыть вкладку</button></div>
+                <!-- <p class="content-fourth__txt">  </p> -->
+                <ul class="content-fourth__block">
+                    <li class="content-fourth__block__mark"><a class="content-fourth__block__link" href="../../projects/Practic/index.html" target="_blank">
+                        <!-- <h3 class="content-fourth__block__mark__title"></h3> -->
+                        <picture>
+                            <source srcset="../../img/webp/Practic.webp" type="image/webp" />
+                            <source srcset="../../img/jpg/Practic.jpg" type="image/jpeg" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/jpg/Practic.jpg" height="95" alt="First practic"/>
+                        </picture>
+                        <div class="content-fourth__block__mark__window">
+                            <p class="content-fourth__block__mark__text">Моя практическая работа.</p>
+                            <p class="content-fourth__block__mark__text">Первый опыт в WEB-разработке, демонстрирующий полученные мной знания и мои возможности.</p>                              
+                        </div>
+                    </a></li>
+                    <li class="content-fourth__block__mark"><a class="content-fourth__block__link" href="../../projects/Happy New Year/page.html" target="_blank">
+                        <!-- <h3 class="content-fourth__block__mark__title"></h3> -->
+                        <picture>
+                            <source srcset="../../img/webp/Happy_New_Year.webp" type="image/webp" />
+                            <source srcset="../../img/jpg/Happy_New_Year.jpg" type="image/jpeg" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/jpg/Happy_New_Year.jpg" height="95" alt="Practic on theme Happy New Year"/>
+                        </picture>
+                        <div class="content-fourth__block__mark__window">
+                            <p class="content-fourth__block__mark__text">Новогодняя поздровительная открытка.</p>
+                            <p class="content-fourth__block__mark__text">Особенность страницы: Встроенный шрифт, Анимирование и сценарий, Использование технологии ВЕМ и препроцессора SASS (в формате SCSS). Адаптивный к устройствам.</p>                              
+                        </div>        
+                    </a></li>
+                    <li class="content-fourth__block__mark">
+                        <picture>
+                            <source srcset="../../img/webp/warning.webp" type="image/webp" />
+                            <source srcset="../../img/png/warning.png" type="image/png" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/png/warning.png" height="95" alt="Not ready image." />
+                        </picture>
+                            <div class="content-fourth__block__mark__window"><p class="content-fourth__block__mark__text">Временно недоступно.</p></div>
+                    </li>
+                </ul></article>
+                
+            <article class="content-fiveth" content-fiveth>
+                <div class="content-block"><h2 class="content-fiveth__title">Другие навыки...</h2><button class="modal__button" type="button" aria-label="close fiveth article" data-modal-close-five content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрыть вкладку</button></div>
+                <p class="content-fiveth__txt">Навыки: Юриспруденция, владение тремя языкам, электрика и радиотехника... (Это не весь перечень моих навыков).</p>
+                <ul class="content-fiveth__block">
+                    <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Юриспруденция.</h3><p class="content-fiveth__block__mark__text">Бакалавр и Магистр Национального университета "Одесская Юридическая Академия" (далее по тексту - НУ "ОЮА") по специальности "Правоведение".</p>
+                        <div class="content-fiveth__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/academia.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/academia.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo-big" src="../../img/jpg/academia.jpg" height="170" alt="Anatolii Ovcharuk near Academy." gallery-six/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Magistr.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Magistr.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo-big" src="../../img/jpg/Magistr.jpg" height="170" alt="Anatolii Ovcharuk - Masters of National University Odessa Law Academy." gallery-seven/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                    <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Владение тремя языками.</h3><p class="content-fiveth__block__mark__text">Английский язык, украинский язык, русский язык - Знания этих языков мною получены ещё со школьных времён. В период моего обучения в НУ "ОЮА", я закрепил эти знания.</p>
+                        <p class="content-fiveth__block__mark__text">Посещая разговорные клубы по английскому языку "GRINGO" и "Window on America Kherson" (бесплатная программа посольства США) мною был приобретён опыт свободного общения на английском языке.</p> 
+                        <!-- https://www.instagram.com/woakherson/ https://for.lib.kherson.ua/woa-about.htm https://www.instagram.com/gringo.kherson/ -->
+                        <p class="content-fiveth__block__mark__text__tense">Уровень украинского языка: Отличный.</p>
+                        <p class="content-fiveth__block__mark__text__tense">Уровень русского языка: Отличный.</p>
+                        <p class="content-fiveth__block__mark__text__tense">Уровень английского языка: Средний.</p>
+                        <div class="content-fiveth__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Screenshot.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Screenshot.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo" src="../../img/jpg/Screenshot.jpg" height="95" alt="Anatolii Ovcharuk visited GRINGO." gallery-eight />
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/okno_v_americu.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/okno_v_americu.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo" src="../../img/jpg/okno_v_americu.jpg" height="95" alt="Window on America logo." gallery-nine/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                        <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Электрика и радиотехника.</h3><p class="content-fiveth__block__mark__text">Считая, что электричество - это наше будущее, проявлен интерес к таким специальностям, как электрика и радиотехника.</p>
+                            <p class="content-fiveth__block__mark__text">Базовые знания по радиотехнике позволяют найти несерьёзные поломки и устранить их.</p>
+                            <p class="content-fiveth__block__mark__text">Фундаментальные знания по электрике позволяют разобраться в работоспособности энергосети в разных ситуациях, а так же найти решение по бесперебойному энергообеспечению.</p>
+                            <svg class="content-fiveth__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                                <path d="M12 0l-12 16h12l-8 16 28-20h-16l12-12z"></path>
+                            </svg>
+                </ul></article>
+
+            <article class="content-sixth" content-sixth><button class="modal__button addrgba" type="button" aria-label="close sixth article" data-modal-close-six content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Вернуться назад</button>
+                <h2 class="content-sixth__title">Текущая вкладка временно не работает.</h2><p class="content-sixth__txt">Вкладка зарезервирована на будущее. Зайдите позже... ⏳😁</p></article>
+        </section>
+        <section class="page__basic__main__block">
+            <ul class="skill left">
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open first article" data-modal-open1>
+                    <!-- Not use "gif" format - Because very big size and gif format cann't be optimization -->
+                    <!-- <img class="skill__mark__picture" src="../../img/gif/Night.gif" alt="Night and computer"/> -->
+                    <picture>
+                        <source srcset="../../img/webp/Night.webp 1x" type="image/webp" />
+                        <source srcset="../../img/jpg/Night.jpg 1x" type="image/jpeg" />
+                        <img class="skill__mark__picture" src="../../img/jpg/Night.jpg" alt="Night and computer" width="340"/>
+                    </picture>
+                    <h2 class="skill__mark__txt first">Мои навыки в сфере WEB-разработки</h2>
+                </button>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open second article" data-modal-open2>
+                        <!-- Use "div" for animation or "img"... P.S. JPEG need to optimization -->
+                        <div class="skill__mark__picture animation__block-one"></div>
+                        <!-- <img class="skill__mark__picture animation__block" src="../../img/jpg/chip_shema_dark.jpg" alt="Chip shema"/> -->
+                        <h2 class="skill__mark__txt second">Техническая поддержка</h2>
+                    </button>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open third article" data-modal-open3>
+                        <picture>
+                            <source srcset="../../img/webp/Home_Studio.webp 1x, ../../img/webp/Home_Studio@2x.webp 2x" type="image/webp" />
+                            <source srcset="../../img/jpg/Home_Studio.jpg 1x, ../../img/jpg/Home_Studio@2x.jpg 2x" type="image/jpeg" />    
+                            <img class="skill__mark__picture" src="../../img/jpg/Home_Studio.jpg" alt="Home studio" width="340"/>
+                        </picture>
+                        <div class="skill__mark__txt third">
+                            <p class="skill__mark__txt__block-one">Мои навыки в музыкальной сфере</p>
+                            <p class="skill__mark__txt__block-two">(На фото моя домашняя студия)</p></div>
+                            <h2 class="skill__mark__title">Мои навыки в музыкальной сфере</h2>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <section class="page__basic__main__block">
+            <ul class="skill right">
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open fourth article" data-modal-open4>
+                        <div class="skill__mark__picture animation__block-two"></div>    
+                            <h2 class="skill__mark__txt fourth">Примеры моих проектов</h2>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open fiveth article" data-modal-open5>
+                        <picture>
+                            <source srcset="../../img/webp/fon_640.webp 1x" type="image/webp" />
+                            <source srcset="../../img/jpg/fon_640.jpg 1x" type="image/jpeg" />
+                            <img class="skill__mark__picture" src="../../img/jpg/fon_640.jpg" alt="Night time" width="340"/>    
+                        </picture>
+                        <h2 class="skill__mark__txt fiveth">Другие навыки...</h2>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open sixth article" data-modal-open6>
+                        <picture>
+                            <source srcset="../../img/webp/warning.webp 1x" type="image/webp" />
+                            <source srcset="../../img/png/warning.png 1x" type="image/png" />
+                            <img class="skill__mark__picture" src="../../img/png/warning.png" alt="Warning" width="340"/>
+                        </picture>
+                        <p class="skill__mark__txt sixth">Вкладка недоступна. Зарезервировано на будущее.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="page__basic__footer">
+        <section class="footer__menu">
+            <address>
+                <p class="contact">Контакт: <a class="contact__telegram" href="tg://resolve?domain=@ovcharuk_tolik">&nbsp
+                    <svg class="contact__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 0L0 13.5L7.66994 16.3407L19.5 5.25002L10.5017 17.3896L10.509 17.3923L10.5 17.3896V24.0001L14.8013 18.982L20.2501 21.0001L24 0Z"/></svg>
+                    Telegram - @ovcharuk_tolik</a></p>
+                <!-- Ещё есть два варианта подключить Telegram:
+                    0. <a href="tg://resolve?domain=username">username</a>
+                    1. <a href="https://tele.click/{username}">{username}</a>
+                    2. https://telegram.me/ВашеИмяПользователя
+                    -->
+            </address>
+            <button class="footer__menu__button-loop" href="" type="button" aria-label="stop/start loop music"><svg class="footer__menu__button-loop__icon"><use href="../../img/svg/sprite.svg#play"></use></svg><p class="footer__menu__button-loop__txt">Вкл./Выкл. фоновую музыку.</p><svg class="footer__menu__button-loop__icon"><use href="../../img/svg/sprite.svg#pause"></use></svg></button>
+            <button class="footer__menu__button-theme" href="" type="button" aria-label="change background theme on page" theme-btn><svg class="footer__menu__button-theme__icon"><use href="../../img/svg/sprite.svg#light"></use></svg><p class="footer__menu__button-theme__txt">Смена темы</p><svg class="footer__menu__button-theme__icon"><use href="../../img/svg/sprite.svg#moon"></use></svg></button>
+            <button class="footer__menu__button-promo" href="" type="button" aria-label="get promocode for discount of my song in bandcamp" promo><svg class="footer__menu__button-promo__icon"><use href="../../img/svg/sprite.svg#ticket"></use></svg><p class="footer__menu__button-promo__txt">Промокод</p><svg class="footer__menu__button-promo__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg></button>
+            <!-- In next line - I'm not create that form. That's standart form "bandcamp". -->
+            <iframe class="bandcamp" scrolling="no" style="border: 0;width: 177px;height: 33px;" src="https://bandcamp.com/band_follow_button_classic/3264840929"></iframe>
+            <audio class="loop" data-status="play" loop>
+                <source src="../../audio/ogg/loop-112_eq_cut.ogg" type="audio/ogg; codecs=vorbis" /> 
+                <source src="../../audio/mp3/loop-112_eq_cut.mp3" type="audio/mpeg" /> 
+                <source src="../../audio/wav/loop-112_eq_cut.wav" type="audio/wav" />
+            </audio>
+        </section>
+        <section class="stats">
+            <p time class="time" id="time"></p>
+            <p class="visit" id="visit" visit ></p>
+        </section>
+    </footer>
+    <script src="../../js/modal.js" type="module"></script>
+    <script src="../../js/current_date_module.js" type="module"></script>
+    <script src="../../js/count_download_module.js" type="module"></script>
+    <script src="../../js/visit_and_time_loading_counter_module.js" type="module"></script>
+    
+    <script type="module">
+        // THEME SCRIPT
+        // "use strict";
+        const theme = {
+            themeBtn: document.querySelector("[theme-btn]"),
+        };
+
+        theme.themeBtn.addEventListener("click", toggleTheme);
+
+        function toggleTheme() {
+        document.body.classList.toggle("theme-body");
+    }
+    </script>
+
+    <script type="module">
+        // PROMO SCRIPT
+        // "use strict";     
+        const messagePromo = () => alert('Скидка 10% на любую мою песню в "Bandcamp" по промокоду: "github-2023" 😀. С Уважением к Вам, Анатолий Овчарук.');
+        // function messagePromo () {alert('Скидка 10% на любую мою песню в "Bandcamp" по промокоду: "github-2023" 😀. С Уважением к Вам, Анатолий Овчарук.')};
+        document.querySelector("[promo]").addEventListener("click", messagePromo);   
+    </script>
+
+    <script type="module">
+    // AUDIO LOOP SCRIPT
+    // "use strict";
+    const refsAudio = document.querySelector("audio.loop");
+    const refsButton = document.querySelector(".footer__menu__button-loop");
+    const refsSecondaryButton = document.querySelector(".content-third__block__mark__button");
+    // console.log(refsAudio);
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    
+    //-----------------------------------
+    // STEREO PARAMS!
+    // const buffer = new AudioBuffer(context, {
+    //   numberOfChannels: 2,
+    //   length: 22050,
+    //   sampleRate: 44100,
+    // });
+    
+    // MONO PARAMS!
+    // const buffer = new AudioBuffer(context, {
+    //   numberOfChannels: 1,
+    //   length: 22050,
+    //   sampleRate: 22050,
+    // });
+    
+    const buffer = context.createBuffer(2, context.sampleRate * 1, context.sampleRate);
+    // const channelData = buffer.getChannelData(0);
+    // console.log(buffer);
+    
+    //-----------------------------------
+    
+    
+    
+    const volume = context.createGain();
+    volume.gain.value = 0.9;
+    
+    const delay = context.createDelay();
+    delay.delayTime.value = 0.01;
+    
+    context.createMediaElementSource(refsAudio).connect(delay).connect(volume).connect(context.destination);
+    
+    // console.log(refsAudio)
+    // console.log(context.destination);
+    // console.log(context.createMediaElementSource(refsAudio))
+    // console.log(context);
+    // console.log(delay);
+    // console.log(refsAudio.duration);
+    
+    refsButton.addEventListener("click", () => init());
+    refsSecondaryButton.addEventListener("click", () => init());
+    
+    function init () {
+        if (refsAudio.getAttribute("data-status") === "stop") {
+            startPlay();
+        } else if (refsAudio.getAttribute("data-status") === "play") {
+            stopPlay();
+        }
+    }
+
+    function startPlay () {
+        refsAudio.setAttribute("data-status", "play")
+        refsAudio.play()
+    }
+    
+    function stopPlay () {
+        refsAudio.setAttribute("data-status", "stop")
+        // volume.gain.exponentialRampToValueAtTime(0.001, context.currentTime + 2.5);
+        refsAudio.pause();
+    }
+    
+    refsAudio.play();
+        </script>
+
+    <script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
+</body>
+</html>

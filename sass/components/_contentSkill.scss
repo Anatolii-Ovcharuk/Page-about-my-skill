@@ -1,0 +1,804 @@
+
+.link {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    @include font($fw: 600, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+    color: $title-color;
+    fill: $title-color;
+    transition: color linear 250ms, fill linear 250ms;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        color: $second-color;
+        fill: $second-color;  
+    }
+
+    &__txt-first {
+        width: 185px;
+        @include font($fw: inherit, $fs: inherit, $lh: inherit, $ls: inherit);   
+        cursor: inherit;  
+        color: inherit;   
+    }
+
+    &__icon {
+        width: 19px;
+        height: 19px;
+        margin: 5px;
+        fill: inherit;
+        cursor: inherit;
+
+        &-big {
+            fill: inherit;
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+        }
+    }
+}
+
+.show__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+
+    &__text {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+
+        pointer-events: none;
+        text-align: center;
+        border-radius: 10px;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: opacity linear 200ms, transform linear 250ms;
+
+        background-color: rgba(120, 0, 0, 0.6);
+        // width: 100%;
+        // height: 100%;
+        width: 220px;
+        height: 85px;
+    }
+
+    &__text.one {
+        @include font($fw: 400, $fs: 10px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+    }
+
+    &__text.two {
+        @include font($fw: 400, $fs: 13px, $lh: 1.2, $ls: 0.03em);
+        padding: 10px;
+    }
+
+    &:hover &__text.one, &:hover &__text.two {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+.content-block {
+    @include fc;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-first {
+    background-image: url(../../img/png/city-two.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    
+        
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 18px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+    } 
+
+    &__txt {
+        text-align: center;
+        @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__block {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        
+        &__mark {
+            // @include fc;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 320px;
+            padding: 10px;
+            margin: 10px;
+
+            border: 1px solid $text-color;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            &__title {
+                text-align: center;
+                @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text {
+                text-align: justify;
+                @include font($fw: 600, $fs: 13px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text__tense {
+                font-style: italic;
+                text-align: center;
+                @include font($fw: 600, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+                // padding: 3px;
+            }
+
+            &__photo {
+                width: 220px;
+                height: 120px;
+                pointer-events: none;
+            }
+        }
+}}
+
+
+
+
+
+
+.content-second {
+    background-image: url(../../img/png/city-one.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 16px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+    } 
+
+    &__txt {
+        text-align: center;
+        @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__block {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        
+        &__mark {
+            position: relative;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 320px;
+            padding: 10px;
+            margin: 10px;
+
+            border: 1px solid $text-color;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+
+            &__title {
+                text-align: center;
+                @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text {
+                text-align: justify;
+                @include font($fw: 600, $fs: 13px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__icon {
+                position: absolute;
+                bottom: 10px;
+                left: 38%;
+
+                fill: $text-color;
+                width: 60px;
+                height: 60px;
+                margin: 10px;
+            }
+            }
+        }
+}
+
+
+
+
+
+
+.content-third {
+    // background-image: url();
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 16px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+    } 
+
+    &__txt {
+        text-align: center;
+        @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__audio {
+        width: 250px;
+        border: 1px solid $select-color;
+        border-radius: 30px;
+        background-color: $title-color;
+    }
+
+    &__block {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        
+        &__mark {
+            // @include fc;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 350px;
+            padding: 5px;
+            margin: 5px;
+            
+            border: 1px solid $text-color; // $secondary-color;
+            border-radius: 10px;
+
+            &__title {
+                text-align: center;
+                @include font($fw: 600, $fs: 13px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text {
+                text-align: justify;
+                @include font($fw: 500, $fs: 11px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text__tense {
+                font-style: italic;
+                text-align: center;
+                @include font($fw: 500, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__gallery {
+                @include fc;
+            }
+
+            &__photo {
+                width: 110px;
+                height: 95px;
+            }
+
+            &__gallery__photo {
+                display: block;
+                height: 95px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            &__example {
+                @include fc;
+                flex-direction: column;
+            }
+
+            &__example__photo {
+                height: 85px;
+                width: 220px;
+                margin: 3px;
+                border-radius: 10px;
+                cursor: zoom-in;
+            }
+
+            &__button {
+                @include fc;
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: inherit;
+                color: $title-color;
+                fill: $title-color;
+                border-color: $title-color;
+                transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+                margin: 3px;
+                width: 250px;
+                height: 26px;
+                cursor: pointer;
+
+                &__icon {
+                    display: block;
+                    height: 11px;
+                    width: 11px;
+                    margin: 5px;
+                    cursor: inherit;
+                }
+
+                &__txt {
+                    color: inherit;
+                    @include font($fw: 500, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+                    margin: 5px;
+                    cursor: inherit;
+                }
+
+                &:hover, &:focus {
+                    color: $link-color;
+                    fill: $link-color;
+                    border-color: $link-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.content-fourth {
+    background-image: url(../../img/png/city-three.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 16px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+    } 
+
+    // &__txt {
+    //     text-align: center;
+    //     @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+    //     padding: 5px;
+        
+    //     padding: 4px;
+    //     background-color: rgba(0, 0, 0, 0.6);
+    // }
+
+    &__block {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        
+        &__mark {
+            position: relative;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition:  box-shadow linear 250ms;
+
+            border: 1px solid $text-color;
+            border-radius: 10px;
+            cursor: pointer;
+
+            // &__title {
+            //     text-align: center;
+            //     @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+            //     padding: 3px;
+            // }
+
+            &__photo {
+                width: 300px;
+                height: 300px;
+                cursor: inherit;
+            }
+
+            &__window {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.6);
+                cursor: inherit;
+                opacity: 0;
+                transition: opacity linear 250ms;
+
+                @include fc;
+                flex-direction: column;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            &__text {
+                text-align: center;
+                @include font($fw: 600, $fs: 16px, $lh: 1.2, $ls: 0.03em);
+                padding: 10px;
+                cursor: inherit;
+            }
+        }
+        
+        &__mark:hover, &__mark:focus {
+            box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+        }
+
+        &__mark:hover &__mark__window, &__mark:focus &__mark__window {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+.content-fiveth {
+    background-image: url(../../img/webp/city-four.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+    &__title {
+        text-align: center;
+        @include font($fw: 600, $fs: 16px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+    } 
+
+    &__txt {
+        text-align: center;
+        @include font($fw: 600, $fs: 14px, $lh: 1.2, $ls: 0.03em);
+        padding: 5px;
+        
+        padding: 4px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__block {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        
+        &__mark {
+            position: relative;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 335px;
+            padding: 10px;
+            margin: 6px;
+
+            border: 1px solid $text-color;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+
+            &__title {
+                text-align: center;
+                @include font($fw: 600, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text {
+                text-align: justify;
+                @include font($fw: 600, $fs: 11px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__text__tense {
+                font-style: italic;
+                text-align: center;
+                // color: $title-color;
+                @include font($fw: 600, $fs: 12px, $lh: 1.2, $ls: 0.03em);
+                padding: 3px;
+            }
+
+            &__icon {
+                position: absolute;
+                bottom: 10px;
+                left: 38%;
+
+                fill: $text-color;
+                width: 60px;
+                height: 60px;
+                margin: 10px;
+            }
+
+            &__gallery {
+                @include fc;
+            }
+
+            &__gallery__photo {
+                display: block;
+                height: 95px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            &__gallery__photo-big {
+                display: block;
+                height: 170px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            &__icon {
+                position: absolute;
+                bottom: 10px;
+                left: 38%;
+
+                fill: $text-color;
+                width: 60px;
+                height: 60px;
+                margin: 10px;
+            }
+
+            }
+        }
+}
+
+
+
+
+
+
+
+.content-sixth {
+    background-image: url(../../img/webp/town.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include fc;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title {
+        text-align: center;
+        color: $hover-color;
+        @include font($fw: 600, $fs: 30px, $lh: 1.2, $ls: 0.03em);
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+    }
+
+    &__txt {
+        text-align: center;
+        color: $hover-color;
+        @include font($fw: 600, $fs: 24px, $lh: 1.2, $ls: 0.03em);
+        padding: 10px;
+        margin: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: $mob) {
+
+   .content-first {
+        background-image: url(../../img/png/city-two.png);
+    
+        &__block {
+            display: block;
+
+            &__mark {
+                @include mc;
+            }
+        }
+    }
+
+    .content-second {
+        background-image: url(../../img/png/city-one.png);
+    
+        &__block {
+            display: block;
+
+            &__mark {
+                @include mc;
+            }
+        }
+    }
+
+    .content-third {  
+        &__block {
+            display: block;
+
+            &__mark {
+                @include mc;
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+ 
+    .content-fourth {
+        background-image: url(../../img/png/city-three.png);
+    
+        &__block {
+            display: block;
+
+            &__mark {
+                @include mc;
+            }
+        }
+    } 
+    
+    .content-fiveth {
+        background-image: url(../../img/webp/city-four.webp);
+    
+        &__block {
+            display: block;
+
+            &__mark {
+                @include mc;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tab-st) and (max-width: $tab-en) {
+
+    .page__basic__main {
+        height: 830px;
+    }
+
+    .content-first {
+        background-image: url(../../img/png/city-two.png);
+    
+        &__block {
+            @include fc;
+            flex-wrap: wrap;
+        }
+    }
+
+    .content-second {
+        background-image: url(../../img/png/city-one.png);
+    
+        &__block {
+            @include fc;
+            flex-wrap: wrap;
+        }
+        }
+
+    .content-third {  
+        &__block {
+            @include fc;
+            flex-wrap: wrap;
+        }
+    }
+ 
+    .content-fourth {
+        background-image: url(../../img/png/city-three.png);
+    
+        &__block {
+            @include fc;
+            flex-wrap: wrap;
+        }
+    } 
+    
+    .content-fiveth {
+        background-image: url(../../img/webp/city-four.webp);
+    
+        &__block {
+            @include fc;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: $desk) { 
+
+    .content-first {
+        background-image: url(../../img/png/city-two.png);
+    
+        &__block {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    .content-second {
+        background-image: url(../../img/png/city-one.png);
+    
+        &__block {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        }
+
+    .content-third {  
+        &__block {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+ 
+    .content-fourth {
+        background-image: url(../../img/png/city-three.png);
+    
+        &__block {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    } 
+    
+    .content-fiveth {
+        background-image: url(../../img/webp/city-four.webp);
+    
+        &__block {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<svg class="snowflake" viewBox="-20 0 640 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: rgb(51, 51, 51); color: white;" width="800px" height="800px">
+      <defs>
+        <path id="slice-shape" d="M130.1,300.5, 130.1,0, 0,75z"></path>
+
+        <clipPath id="slice-clip-path">
+          <use xlink:href="#slice-shape"></use>
+        </clipPath>
+
+        <symbol id="slice">
+          <!-- Clipped slice content -->
+          <g clip-path="url(#slice-clip-path)" id="target-group" stroke="currentColor" stroke-linecap="round" stroke-width="5"><path d=" M129.90833282470703,0.383331298828125 92.40833282470703,231.38333129882812 M128.40833282470703,57.383331298828125 122.90833282470703,47.383331298828125 M127.90833282470703,67.38333129882812 130.40833282470703,65.38333129882812 M129.90833282470703,74.88333129882812 120.90833282470703,65.88333129882812 M128.40833282470703,90.88333129882812 119.40833282470703,81.88333129882812 M128.40833282470703,107.88333129882812 115.40833282470703,96.88333129882812 M128.40833282470703,129.88333129882812 110.90833282470703,110.38333129882812 M129.40833282470703,148.38333129882812 111.40833282470703,132.88333129882812 M126.90833282470703,165.88333129882812 105.90833282470703,146.88333129882812 M129.40833282470703,185.88333129882812 104.40833282470703,166.88333129882812 M127.90833282470703,205.88333129882812 101.40833282470703,184.88333129882812 M128.40833282470703,222.88333129882812 96.90833282470703,233.38333129882812 M128.40833282470703,225.88333129882812 113.90833282470703,264.3833312988281 M112.40833282470703,265.8833312988281 137.90833282470703,262.8833312988281 M122.90833282470703,285.8833312988281 133.40833282470703,281.8833312988281"></path></g>
+        </symbol>
+
+        <symbol id="pair-slices">
+          <g transform="translate(170)">
+            <use xlink:href="#slice"></use>
+            <!-- Mirrored slice to show symmetry -->
+            <use xlink:href="#slice" transform="translate(260,0) scale(-1,1)"></use>
+          </g>
+        </symbol>
+      </defs>
+
+      <!-- Visible snowflake -->
+      <g>
+        <use xlink:href="#pair-slices" transform="rotate(30, 300, 300)"></use>
+        <use xlink:href="#pair-slices" transform="rotate(90, 300, 300)"></use>
+        <use xlink:href="#pair-slices" transform="rotate(150, 300, 300)"></use>
+        <use xlink:href="#pair-slices" transform="rotate(210, 300, 300)"></use>
+        <use xlink:href="#pair-slices" transform="rotate(270, 300, 300)"></use>
+        <use xlink:href="#pair-slices" transform="rotate(330, 300, 300)"></use>
+      </g>
+    </svg>

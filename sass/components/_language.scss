@@ -1,0 +1,114 @@
+.page__language {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 95vh;
+
+    @media screen and (max-width: $mob) and (orientation: portrait)  {
+        background-image: url(../../img/png/World_map_Globe_Map.png);
+    }
+
+    @media screen and (max-width: $mob) and (orientation: landscape) {
+        background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);        
+    }
+
+    @media screen and (min-width: $tab-st) {
+        background-image: url(../../img/png/gray_and_black_map_screenshot_alpha.png);        
+    }
+}
+
+main .lang {
+    &__title {
+        font-size: 20px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    &__choice {
+        margin-top: 20px;
+        @include mc;
+        margin-bottom: 30vh;
+    }
+
+    &__choice a {
+        position: relative;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        transition: box-shadow linear 250ms;
+    }    
+
+    &__choice a:hover, &__choice a:focus {
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2), -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    @media screen and (max-width: $mob) {
+        &__choice {
+            @include fc;
+        }
+
+        &__choice a {
+            @include mc;
+            display: inline-block;
+            width: 80px;
+            height: 80px;    
+        }
+ 
+        &__choice img {
+            width: 80px;
+            height: 80px;
+        }       
+
+        &__title {
+            @include font($fw: 700);
+            padding: 0px 15px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        &__choice a p {
+            position: absolute;
+            top: 90px;
+            left: -9px;
+
+            width: 100px;
+            text-align: center;
+            @include font($fs: 12px, $fw:600);
+            transition: color linear 250ms;
+            margin-bottom: 20px;
+        }
+
+        & .lang__choice__eng:hover .txt__eng, & .lang__choice__eng:focus .txt__eng, 
+        & .lang__choice__ukr:hover .txt__ukr, & .lang__choice__ukr:focus .txt__ukr, 
+        & .lang__choice__rus:hover .txt__rus, & .lang__choice__rus:focus .txt__rus {
+            color: $select-color;
+        }
+    }
+
+    @media screen and (min-width: $tab-st) {
+        &__choice {
+            @include fc;
+            gap: 30px;
+        }
+
+        &__choice p {
+            position: absolute;
+            top: 110px;
+            left: -2px;
+
+            width: 100px;
+            text-align: center;
+            @include font($fs: 16px, $fw:600);
+            transition: color linear 250ms;
+            cursor: pointer;
+        }
+
+        & .lang__choice__eng:hover .txt__eng, & .lang__choice__eng:focus .txt__eng, 
+        & .lang__choice__ukr:hover .txt__ukr, & .lang__choice__ukr:focus .txt__ukr, 
+        & .lang__choice__rus:hover .txt__rus, & .lang__choice__rus:focus .txt__rus {
+            color: $select-color;
+        }
+    }
+}

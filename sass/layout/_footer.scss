@@ -1,0 +1,189 @@
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: $text-color;
+    fill: $text-color;
+
+    &__telegram {
+        margin-left: 2px;
+        color: $text-color;
+        transition: fill linear 250ms, color linear 250ms;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: inherit; /* Set color in index.html */
+    }
+
+    &__telegram:hover, &__telegram:focus {
+        color: $hover-color;
+        fill: $hover-color;
+    }
+}
+
+.loop {
+    display: none;
+    @include mc;
+    border-radius: 20px;
+    width: 275px;
+    margin-bottom: 10px;
+}
+
+.footer__menu {
+
+    &__button-loop {
+        @include fc;
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: inherit;
+        color: $text-color;
+        fill: $text-color;
+        border-color: $text-color;
+        transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+        margin: 3px;
+        width: 250px;
+        height: 26px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+        &__icon {
+            display: block;
+            height: 13px;
+            width: 13px;
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &__txt {
+            color: inherit;
+            @include font($fw: 500, $fs: 11px, $lh: 1.2, $ls: 0.03em);
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &:hover, &:focus {
+            color: $hover-color;
+            fill: $hover-color;
+            border-color: $hover-color;
+        }
+    }
+
+    &__button-theme {
+        @include fc;
+        flex-wrap: nowrap;
+        background-color: inherit;
+        color: $text-color;
+        fill: $text-color;
+        border-color: $text-color;
+        transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+        margin: 3px;
+        width: 150px;
+        height: 26px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+        &__icon {
+            display: block;
+            height: 13px;
+            width: 13px;
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &__txt {
+            color: inherit;
+            @include font($fw: 500, $fs: 11px, $lh: 1.2, $ls: 0.03em);
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &:hover, &:focus {
+            color: $hover-color;
+            fill: $hover-color;
+            border-color: $hover-color;
+        }
+    }
+
+    &__button-promo {
+        @include fc;
+        flex-wrap: nowrap;
+        background-color: inherit;
+        color: $text-color;
+        fill: $text-color;
+        border-color: $text-color;
+        transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+        margin: 3px;
+        width: 120px;
+        height: 26px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+        &__icon {
+            display: block;
+            height: 16px;
+            width: 16px;
+            margin: 2px;
+            cursor: inherit;
+        }
+
+        &__txt {
+            color: inherit;
+            @include font($fw: 500, $fs: 11px, $lh: 1.2, $ls: 0.03em);
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &:hover, &:focus {
+            color: $hover-color;
+            fill: $hover-color;
+            border-color: $hover-color;
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: $mob) {
+    .footer__menu {
+        display: block;
+
+        &__button-loop, &__button-theme, &__button-promo {
+            @include mc;
+            margin-bottom: 6px;
+        }
+    }
+}
+ 
+@media screen and (min-width: $tab-st) and (max-width: $tab-en) {
+    .footer__menu {
+        display: block;
+        
+        &__button-loop, &__button-theme, &__button-promo {
+            @include mc;
+            margin-bottom: 6px;
+        }
+    }
+}
+ 
+@media screen and (min-width: $desk) { 
+    .footer__menu {
+        @include fc;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+}
+
+.stats {
+    @include fc;
+    flex-wrap: wrap;
+}

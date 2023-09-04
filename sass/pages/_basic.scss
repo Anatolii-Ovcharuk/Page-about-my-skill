@@ -1,0 +1,200 @@
+
+.page__basic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 95vh;
+}
+
+
+.page__basic__main {
+	position: relative;
+    background-position: center;   
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    @media screen and (max-width: $mob) and (orientation: portrait)  {
+        background-image: url(../../img/webp/city.webp);
+    }
+    
+    @media screen and (max-width: $mob) and (orientation: landscape) {
+        background-image: url(../../img/webp/city.webp);            
+    }
+	
+    @media screen and (min-width: $tab-st) {
+        background-image: url(../../img/webp/city.webp);  
+    }
+
+	@media screen and (min-width: $tab-st) and (max-width: $tab-en) {
+		@include fc;
+    }
+}
+
+
+.skill {
+
+    @media screen and (max-width: $mob) {
+		@include fc;
+		flex-direction: column;	
+    }
+
+	@media screen and (min-width: $tab-st) and (max-width: $tab-en) {
+		@include fc;
+		flex-direction: column;	
+    }
+
+    @media screen and (min-width: $desk) {
+        @include fc;
+        gap: 10px;
+    }
+
+    &__mark {
+        width: $width-block;
+        height: $height-block;
+        border: 1px solid $button-color;
+        border-radius: 10px;
+        margin-top: 10px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: box-shadow linear 250ms;
+    }
+
+    &__mark:hover, &__mark:focus {
+		box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+	}
+
+    // &__mark:hover .third, &__mark:focus .third {
+	// 	opacity: 1;
+	// }	
+
+    &.left {
+        animation: AnimLeft 2s ease 2s 1 normal forwards;
+		@include m(0px, 10px, 10px, 10px);
+    }
+
+    &.right {
+        animation: AnimRight 2s ease 2s 1 normal forwards;
+		@include m(0px, 10px, 0px, 10px);
+    }
+}
+
+@keyframes AnimLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+	// 0% {
+	// 	animation-timing-function: ease-in;
+	// 	opacity: 1;
+	// 	transform: translateX(-88px);
+	// }
+
+	// 24% {
+	// 	opacity: 1;
+	// }
+
+	// 40% {
+	// 	animation-timing-function: ease-in;
+	// 	transform: translateX(-46px);
+	// }
+
+	// 65% {
+	// 	animation-timing-function: ease-in;
+	// 	transform: translateX(-23px);
+	// }
+
+	// 82% {
+	// 	animation-timing-function: ease-in;
+	// 	transform: translateX(-6.5px);
+	// }
+
+	// 93% {
+	// 	animation-timing-function: ease-in;
+	// 	transform: translateX(-4px);
+	// }
+
+	// 25%,
+	// 55%,
+	// 75%,
+	// 87%,
+	// 98% {
+	// 	animation-timing-function: ease-out;
+	// 	transform: translateX(0px);
+	// }
+
+	// 100% {
+	// 	animation-timing-function: ease-out;
+	// 	opacity: 1;
+	// 	transform: translateX(0px);
+	// }
+	// }
+
+@keyframes AnimRight {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+// 	0% {
+// 		animation-timing-function: ease-in;
+// 		opacity: 1;
+// 		transform: translateX(88px);
+// 	}
+
+// 	24% {
+// 		opacity: 1;
+// 	}
+
+// 	40% {
+// 		animation-timing-function: ease-in;
+// 		transform: translateX(46px);
+// 	}
+
+// 	65% {
+// 		animation-timing-function: ease-in;
+// 		transform: translateX(23px);
+// 	}
+
+// 	82% {
+// 		animation-timing-function: ease-in;
+// 		transform: translateX(6.5px);
+// 	}
+
+// 	93% {
+// 		animation-timing-function: ease-in;
+// 		transform: translateX(4px);
+// 	}
+
+// 	25%,
+// 	55%,
+// 	75%,
+// 	87%,
+// 	98% {
+// 		animation-timing-function: ease-out;
+// 		transform: translateX(0px);
+// 	}
+
+// 	100% {
+// 		animation-timing-function: ease-out;
+// 		opacity: 1;
+// 		transform: translateX(0px);
+// 	}
+// }
+
+

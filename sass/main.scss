@@ -1,0 +1,21 @@
+@import 'utils/variables';
+@import 'utils/placeholders';
+@import 'utils/mixins';
+
+@import 'base/_default.scss';
+// @import 'base/logo';
+// @import 'base/fonts';
+
+@import 'components/language';
+@import 'components/block';
+@import 'components/modal';
+@import 'components/contentSkill';
+
+@import 'pages/basic';
+
+@import 'layout/_header.scss';
+@import 'layout/footer';
+
+// @import 'components/';
+
+// @import 'base/normalize';

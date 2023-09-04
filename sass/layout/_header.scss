@@ -1,0 +1,250 @@
+
+.page__basic__header {
+    @include fc;
+    border-bottom: 1px solid $secondary-color;
+    padding: 5px 10px;
+
+    & .portfolio {
+        @media screen and (max-width: $mob) {
+            @include fc;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @media screen and (min-width: $tab-st) {
+            display: flex;
+            align-items: center;
+        }
+
+        &__foto {
+            border-radius: 50%;
+
+            box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
+
+            @media screen and (max-width: $mob) {
+                margin: 5px 10px;
+                width: 60px;
+            }
+    
+            @media screen and (min-width: $tab-st) {
+                margin: 10px 20px;
+                width: 80px;
+            }
+        }
+
+        &__first__title {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+
+    @media screen and (max-width: $mob) and (orientation: portrait)  {
+        .addition, .orientation { display: none; }
+        .info { @include font($fw: 400, $fs: 11px, $lh: 1.2, $ls: 0.03em); }
+    }
+
+    @media screen and (max-width: $mob) and (orientation: landscape) {
+        .addition { display: block; }    
+        .orientation { display: none; }
+        .info { @include font($fw: 400, $fs: 12px, $lh: 1.2, $ls: 0.03em); }    
+    }
+
+    @media screen and (min-width: $tab-st) {
+        .addition { display: block; }
+        .orientation { display: none; }
+    }
+
+    @media screen and (min-width: $tab-st) and (max-width: $tab-en) {
+        .info { @include font($fw: 400, $fs: 12px, $lh: 1.2, $ls: 0.03em); }
+        .orientation { display: none; }
+    }
+    
+    @media screen and (min-width: $desk) { 
+        .info { @include font($fw: 400, $fs: 14px, $lh: 1.2, $ls: 0.03em); }
+        .orientation { display: block; }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2px;
+
+    @media screen and (max-width: $mob) and (orientation: portrait)  {
+        @include m(5px, 20px, 5px, 40px);
+    }
+
+    @media screen and (max-width: $mob) and (orientation: landscape) {
+        @include m(5px, 30px, 5px, 50px);
+    }
+
+    @media screen and (min-width: $tab-st) {
+        @include m(5px, 30px, 5px, 50px);     
+    }
+
+
+    &__link {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        // display: block;
+        padding: 4px;
+        margin: 1px;
+        cursor: pointer;
+        color: inherit;
+        fill: inherit;
+
+        & p {
+            cursor: inherit;
+            color: inherit;
+        }
+
+    }
+
+    &__link__icon {
+        margin-right: 5px;
+        fill: inherit;
+        @media screen and (max-width: $mob) {
+            width: 14px;
+            height: 14px;
+        }
+        @media screen and (min-width: $tab-st) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.mark__info {
+    position: relative;
+    color: $text-color;
+    fill: $text-color;
+    transition: color linear 250ms, fill linear 250ms;
+
+    &::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    content: '';
+    // opacity: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $select-color;
+    transform: scaleX(0);
+    transition: transform linear 250ms; // "opacity linear 250ms," - can use with transform...
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        // opacity: 1;
+    }
+
+    &:hover, &:focus {
+        color: $select-color;
+        fill: $select-color;
+    }
+}
+
+
+// First title
+.portfolio__first__title {
+    @include fc;
+    flex-direction: column;
+    margin: 5px;
+
+    @media screen and (max-width: $mob) {
+        &__part-one { @include font($fw: 600, $fs: 15px, $lh: 1.2, $ls: 0.03em); }
+        &__part-two { @include font($fw: 600, $fs: 11px, $lh: 1.2, $ls: 0.03em); }
+    }
+        
+    @media screen and (min-width: $tab-st) {
+        &__part-one { @include font($fw: 800, $fs: 17px, $lh: 1.2, $ls: 0.03em); }
+        &__part-two { @include font($fw: 600, $fs: 13px, $lh: 1.2, $ls: 0.03em); }
+    }
+}
+
+
+
+// Globe with stars
+.orientation {
+    @include m(10px, 10px, 10px, 40px);
+    position: relative;
+
+    &__planet {
+        width: 115px;
+    }
+
+    &__stars {
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        width: 100px;
+    
+        -webkit-animation-name: rotation;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: rotation;
+        -moz-animation-duration: 3s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -o-animation-name: rotation;
+        -o-animation-duration: 3s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-timing-function: linear;
+        animation-name: rotation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+@-moz-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+
+@-o-keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+
+@keyframes rotation {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(720deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+}
