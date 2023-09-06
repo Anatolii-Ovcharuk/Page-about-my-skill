@@ -9,67 +9,68 @@
 
 /* That's default variables*/
 // let visitCount = 0;
-let totalTimeLoadPage = 0;
+// let totalTimeLoadPage = 0;
+let  resultTimeLoadPage = 0;
 
-const requestURL = '/json/data.json';
-let response = await fetch(requestURL);
-let visitCount = (await response.json()).visitCount;
+// const requestURL = '/json/data.json';
+// let response = await fetch(requestURL);
+// let visitCount = (await response.json()).visitCount;
 
-let data = {
-  "id": 0.1,
-  "countDownload": 0,
-  "visitCount": 0,
-  "totalTimeLoadPage": 0
-};
+// let data = {
+//   "id": 0.1,
+//   "countDownload": 0,
+//   "visitCount": 0,
+//   "totalTimeLoadPage": 0
+// };
 
 
-const resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000;
+resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000;
 
-const totalTimeLoad = () => {
-    const result = totalTimeLoadPage += resultTimeLoadPage;
-    data.totalTimeLoadPage = result
-    // send(requestURL, {"totalTimeLoadPage": result});
-    return result;
-}
+// const totalTimeLoad = () => {
+//     const result = totalTimeLoadPage += resultTimeLoadPage;
+//     data.totalTimeLoadPage = result
+//     // send(requestURL, {"totalTimeLoadPage": result});
+//     return result;
+// }
 
-const visitProcess = () => {
-    const result = visitCount += 1;
-    data.visitCount = result
-    // send(requestURL, {"visitCount": result});
-    return result;
-}
+// const visitProcess = () => {
+//     const result = visitCount += 1;
+//     data.visitCount = result
+//     // send(requestURL, {"visitCount": result});
+//     return result;
+// }
 
-const statsMiddle = () => totalTimeLoad() / visitCount;
+// const statsMiddle = () => totalTimeLoad() / visitCount;
 
     /* Use one line code below this line. Include that's code <p class="visit" id="visit" visit ></p> in HTML page for show information. */
     // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle()}s. `; /* Show result in HTML by property */
-    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | Visited of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle()} s. `; /* Show result in HTML by ID */
+    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | Visited of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle()} s. `; /* Show result in HTML by ID */
 
-    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
+    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
 
     console.log(data);
 
 
 // ----------------------------- ОТПРАВКА - № 1 -----------------------------
 
-const options = {
-  method: "POST", // *GET, POST, PATCH, PUT, DELETE, etc.
-  mode: 'no-cors', // no-cors, *cors, same-origin
-  cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-  referrerPolicy: 'unsafe-url', // no-referrer, *client
-  body: JSON.stringify(data),
-  headers: {
-    "Content-Type": "application/json; charset=UTF-8",
-    // "Allow": "GET, POST, PATCH, HEAD, OPTIONS",
-  },
-  // redirect: 'follow', // manual, *follow, error
-  // credentials: 'same-origin', // include, *same-origin, omit
-};
+// const options = {
+//   method: "POST", // *GET, POST, PATCH, PUT, DELETE, etc.
+//   mode: 'no-cors', // no-cors, *cors, same-origin
+//   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+//   referrerPolicy: 'unsafe-url', // no-referrer, *client
+//   body: JSON.stringify(data),
+//   headers: {
+//     "Content-Type": "application/json; charset=UTF-8",
+//     // "Allow": "GET, POST, PATCH, HEAD, OPTIONS",
+//   },
+//   // redirect: 'follow', // manual, *follow, error
+//   // credentials: 'same-origin', // include, *same-origin, omit
+// };
 
-fetch(`/../../json/data.json`, options)
-  .then(response => response.json())
-  .then(post => console.log(post))
-  .catch(error => console.log(`ERROR! ${error}`));
+// fetch(`/../../json/data.json`, options)
+//   .then(response => response.json())
+//   .then(post => console.log(post))
+//   .catch(error => console.log(`ERROR! ${error}`));
 
 // ----------------------------- ОТПРАВКА - № 2 -----------------------------
 
