@@ -1,0 +1,292 @@
+.section.clients {
+    @media screen and (max-width: $mob) {
+        background-color: $col-wh;
+
+        & .title.second {
+            margin-bottom: 30px;
+            padding-top: 60px;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            @include font($fw: 700, $fs: 28px, $lh: 33px);
+               // font-weight: 700;
+               // font-size: 28px;
+               // line-height: 33px;
+
+            /* identical to box height */
+            text-align: center;
+               // letter-spacing: 0.03em;
+
+            color: $title-color;
+        }     
+        
+        & .four.container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+           // display: flex;
+           // justify-content: center;
+           // align-items: center;
+            width: calc(100% - 30px);
+            @include margin-center;
+            // margin-right: auto;
+            // margin-left: auto;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        
+            padding-bottom: 60px;
+            padding-left: 0px;
+            gap: 30px;
+        }
+    }
+
+    @media screen and (min-width: $tab) and (max-width: 1199px) {
+        background-color: #ffffff;
+
+        & .title.second {
+            margin-bottom: 30px;
+            padding-top: 60px;
+
+            text-align: center;
+        }
+    
+        & .four.container {
+            @include center;
+           // display: flex;
+           // justify-content: center;
+           // align-items: center;
+            flex-wrap: wrap;
+            width: 768px;
+            @include margin-center;
+            // margin-right: auto;
+            // margin-left: auto;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 60px;
+            gap: 30px;
+        }
+    }
+
+    @media screen and (min-width: $desk) {
+        background-color: #ffffff;
+
+        & .title.second {
+            margin-bottom: 50px;
+            padding-top: 94px;
+        }
+    
+        & .four.container {
+            @include center;
+           // display: flex;
+           // justify-content: center;
+           // align-items: center;
+            width: var(--width-page);
+            @include margin-center;
+            // margin-right: auto;
+            // margin-left: auto;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 94px;
+            gap: 30px;
+        }
+    }
+}
+
+.four.container {
+    @media screen and (max-width: $mob) {
+        & .cl-one {
+            display: block;
+            width: 47px;
+            height: 46px;
+        }
+    
+        & .cl-two {
+            display: block;
+            width: 40px;
+            height: 52px;
+        }
+    
+        & .cl-three {
+            display: block;
+            width: 43px;
+            height: 41px;
+        }
+    
+        & .cl-four {
+            display: block;
+            width: 84px;
+            height: 40px;
+        }
+    
+        & .cl-five {
+            display: block;
+            width: 62px;
+            height: 45px;
+        }
+    
+        & .cl-six {
+            display: block;
+            width: 93px;
+            height: 43px;
+        }
+
+        & .mark.client {
+            flex-basis: 45%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: $tab) and (max-width: 1199px) {
+        & .cl-one {
+            display: block;
+            width: 47px;
+            height: 46px;
+        }
+    
+        & .cl-two {
+            display: block;
+            width: 40px;
+            height: 52px;
+        }
+    
+        & .cl-three {
+            display: block;
+            width: 43px;
+            height: 41px;
+        }
+    
+        & .cl-four {
+            display: block;
+            width: 84px;
+            height: 40px;
+        }
+    
+        & .cl-five {
+            display: block;
+            width: 62px;
+            height: 45px;
+        }
+    
+        & .cl-six {
+            display: block;
+            width: 93px;
+            height: 43px;
+        }
+
+        & .mark.client {
+            display: flex;
+            flex-wrap: wrap;
+            width: 226px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: $desk) {
+        & .cl-one {
+            display: block;
+            width: 47px;
+            height: 46px;
+        }
+    
+        & .cl-two {
+            display: block;
+            width: 40px;
+            height: 52px;
+        }
+    
+        & .cl-three {
+            display: block;
+            width: 43px;
+            height: 41px;
+        }
+    
+        & .cl-four {
+            display: block;
+            width: 84px;
+            height: 40px;
+        }
+    
+        & .cl-five {
+            display: block;
+            width: 62px;
+            height: 45px;
+        }
+    
+        & .cl-six {
+            display: block;
+            width: 93px;
+            height: 43px;
+        }
+    }
+}
+
+.link.col {
+    @media screen and (max-width: $mob) {
+        @include center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+         min-width: 210px;
+         max-width: $mob;
+         width: 100%;
+         height: 92px;
+         border: 1px solid var(--icon-color);
+         border-radius: 4px;
+         color: var(--icon-color);
+         transition: color linear 250ms, border linear 250ms;
+     
+         &:hover {
+         border: 1px solid var(--button-color);
+         color: var(--button-color);
+         }
+    }
+
+    @media screen and (min-width: $tab) and (max-width: 1199px) {
+        @include center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+         min-width: 210px;
+         width: 226px;
+         height: 92px;
+         border: 1px solid var(--icon-color);
+         border-radius: 4px;
+         color: var(--icon-color);
+         transition: color linear 250ms, border linear 250ms;
+     
+         &:hover {
+         border: 1px solid var(--button-color);
+         color: var(--button-color);
+         }
+    }
+
+    @media screen and (min-width: $desk) {
+        @include center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+         width: 170px;
+         height: 92px;
+         border: 1px solid var(--icon-color);
+         border-radius: 4px;
+         color: var(--icon-color);
+         transition: color linear 250ms, border linear 250ms;
+     
+         &:hover {
+         border: 1px solid var(--button-color);
+         color: var(--button-color);
+         }
+    }
+}
+
+.icon.client {
+        fill: currentColor;
+}

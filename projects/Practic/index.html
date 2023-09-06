@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work - Part 6</title>
+    <title>Work - Final (Part 8)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/modern-normalize.css">
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!--  <link rel="stylesheet" href="./css/modern-normalize.css"> -->
+    <!-- <link rel="stylesheet" href="./SASS/main.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/styles.css"/> -->
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="icon" href="./img/favicon.png" sizes="32x32" type="image/png" /> 
 </head>
-<body>
+<body class="body">
     <header>
         <div class="marg">
         <a class="logo" href="./index.html">Web<span class="logo-part-dark">Studio</span></a>
+            <button class="mob-menu-button js-open-menu" data-menu-open type="menu" aria-label="Кнопка меню" aria-expanded="false" aria-controls="mobile-menu"><svg class="icon-mobmenu">
+                <use class="mo-icon" href="./img/sprite.svg#icon-menu_40px"></use>
+            </svg></button>
+            <div class="mob-menu js-menu-container" data-menu>
             <nav class="nav-site">
+                <button class="mob-menu-button js-close-menu" data-menu-close type="menu" aria-label="Кнопка меню" aria-expanded="false" aria-controls="mobile-menu"><svg class="icon-mobmenu">
+                    <use class="mc-icon" href="./img/sprite.svg#icon-close_40px"></use>
+                </svg></button>
                 <ul class="hd menu">
                     <li class="mark"><a class="link studio active" href="./index.html">Студія</a></li>
                     <li class="mark"><a class="link" href="./page.html">Портфоліо</a></li>
@@ -25,7 +35,7 @@
             </nav>
             <address class="address-contacts">
                 <ul class="hd cont">
-                    <li class="mark"><a class="link icon-header" href="mailto:info@devstudio.com">
+                    <li class="mark"><a class="link mail icon-header" href="mailto:info@devstudio.com">
                         <svg class="icon-header" width="16" height="12">
                             <use href="./img/sprite.svg#icon-e-mail"></use>
                         </svg>
@@ -36,8 +46,15 @@
                         </svg>
                         +38 096 111 11 11</a></li>
                 </ul>
+                <ul class="social-link">
+                    <li><a class="link" href="">Instagram</a></li>
+                    <li><a class="link" href="">Twitter</a></li>
+                    <li><a class="link" href="">Facebook</a></li>
+                    <li><a class="link" href="">Linkedin</a></li>
+                </ul>
             </address>
             </div>
+        </div>
     </header>
     <main>
         <section class="section general">
@@ -103,9 +120,24 @@
             <div class="mk">
             <h2 class="title second">Чим ми займаємося</h2>
                 <ul class="photo">
-                    <li class="mark"><div class="op"><img class="img-photo" src="./img/box_1.jpg" alt="набір коду"><div class="divdo"><p>Десктопні додатки</p></div></div></li>
-                    <li class="mark"><div class="op"><img class="img-photo" src="./img/img(4).jpg" alt="розробка для телефонів"><div class="divdo"><p>Мобільні додатки</p></div></div></li>
-                    <li class="mark"><div class="op"><img class="img-photo" src="./img/img(5).jpg" alt="планшет з палітрою кольору"><div class="divdo"><p>Дизайнерські рішення</p></div></div></li>
+                    <li class="mark"><div class="op">
+                        <img class="img-photo"  
+                        srcset="./img/jpg/first_desk.jpg 1x, ./img/jpg/first_desk@2x.jpg 2x, ./img/jpg/first_desk@3x.jpg 3x"
+                        src="./img/jpg/first_desk.jpg" 
+                        alt="набір коду" />
+                        <div class="divdo"><p>Десктопні додатки</p></div></div></li>
+                    <li class="mark"><div class="op">
+                        <img class="img-photo" 
+                        srcset="./img/jpg/second_desk.jpg 1x, ./img/jpg/second_desk@2x.jpg 2x, ./img/jpg/second_desk@3x.jpg 3x"
+                        src="./img/jpg/second_desk@2x.jpg" 
+                        alt="розробка для телефонів" />
+                        <div class="divdo"><p>Мобільні додатки</p></div></div></li>
+                    <li class="mark"><div class="op">
+                        <img class="img-photo" 
+                        srcset="./img/jpg/third_desk.jpg 1x, ./img/jpg/third_desk@2x.jpg 2x, ./img/jpg/third_desk@3x.jpg 3x"
+                        src="./img/jpg/third_desk.jpg" 
+                        alt="планшет з палітрою кольору" />
+                        <div class="divdo"><p>Дизайнерські рішення</p></div></div></li>
                 </ul>
             </div>
         </section>
@@ -114,7 +146,13 @@
             <h2 class="title second">Наша команда</h2>
             <ul class="third container">
                 <li class="mark members">
-                    <img class="img-members" src="./img/img.jpg" alt="Ігор Дем'яненко" height="260">
+                    <picture>
+                        <source srcset="./img/jpg/igor_desk.jpg 1x, ./img/jpg/igor_desk@2x.jpg 2x, ./img/jpg/igor_desk@3x.jpg 3x" sizes="270" type="image/jpeg" media="(min-width: 1200px)"/>
+                        <source srcset="./img/jpg/igor_tab.jpg 1x, ./img/jpg/igor_tab@2x.jpg 2x, ./img/jpg/igor_tab@3x.jpg 3x" sizes="354" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)"/>
+                        <source srcset="./img/jpg/igor_mob.jpg 1x, ./img/jpg/igor_mob@2x.jpg 2x, ./img/jpg/igor_mob@3x.jpg 3x" sizes="450" type="image/jpeg" media="(max-width: 767px)"/>
+                        <img class="img-members" 
+                        src="./img/jpg/igor_desk.jpg" alt="Ігор Дем'яненко" height="260"/>
+                    </picture>
                     <h3 class="title name">Ігор Дем'яненко</h3>
                     <p class="text tmembers">Product Designer</p>
                     <div class="cont contmemb">
@@ -141,7 +179,13 @@
                     </div>
                 </li>
                 <li class="mark members">
-                    <img class="img-members" src="./img/img(1).jpg" alt="Ольга Рєпіна" height="260">
+                    <picture>
+                        <source srcset="./img/jpg/olga_desk.jpg 1x, ./img/jpg/olga_desk@2x.jpg 2x, ./img/jpg/olga_desk@3x.jpg 3x" sizes="270" type="image/jpeg" media="(min-width: 1200px)"/>
+                        <source srcset="./img/jpg/olga_tab.jpg 1x, ./img/jpg/olga_tab@2x.jpg 2x, ./img/jpg/olga_tab@3x.jpg 3x" sizes="354" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)"/>
+                        <source srcset="./img/jpg/olga_mob.jpg 1x, ./img/jpg/olga_mob@2x.jpg 2x, ./img/jpg/olga_mob@3x.jpg 3x" sizes="450" type="image/jpeg" media="(max-width: 767px)"/>
+                        <img class="img-members" 
+                        src="./img/jpg/img olga_desk.jpg"  alt="Ольга Рєпіна" height="260"/>
+                    </picture>
                     <h3 class="title name">Ольга Рєпіна</h3>
                     <p class="text tmembers">Frontend Developer</p>
                     <div class="cont contmemb">
@@ -168,7 +212,13 @@
                     </div>
                 </li>
                 <li class="mark members">
-                    <img class="img-members" src="./img/img(2).jpg" alt="Микола Тарасов" height="260">
+                    <picture>
+                        <source srcset="./img/jpg/mykola_desk.jpg 1x, ./img/jpg/mykola_desk@2x.jpg 2x, ./img/jpg/mykola_desk@3x.jpg 3x" sizes="270" type="image/jpeg" media="(min-width: 1200px)"/>
+                        <source srcset="./img/jpg/mykola_tab.jpg 1x, ./img/jpg/mykola_tab@2x.jpg 2x, ./img/jpg/mykola_tab@3x.jpg 3x" sizes="354" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)"/>
+                        <source srcset="./img/jpg/mykola_mob.jpg 1x, ./img/jpg/mykola_mob@2x.jpg 2x, ./img/jpg/mykola_mob@3x.jpg 3x" sizes="450" type="image/jpeg" media="(max-width: 767px)"/>
+                        <img class="img-members" 
+                        src="./img/jpg/mykola_desk.jpg" alt="Микола Тарасов" height="260"/>
+                    </picture>
                     <h3 class="title name">Микола Тарасов</h3>
                     <p class="text tmembers">Marketing</p>
                     <div class="cont contmemb">
@@ -195,7 +245,13 @@
                     </div>
                 </li>
                 <li class="mark members">
-                    <img class="img-members" src="./img/img(3).jpg" alt="Михайло Єрмаков" height="260">
+                    <picture>
+                        <source srcset="./img/jpg/mihail_desk.jpg 1x, ./img/jpg/mihail_desk@2x.jpg 2x, ./img/jpg/mihail_desk@3x.jpg 3x" sizes="270" type="image/jpeg" media="(min-width: 1200px)"/>
+                        <source srcset="./img/jpg/mihail_tab.jpg 1x, ./img/jpg/mihail_tab@2x.jpg 2x, ./img/jpg/mihail_tab@3x.jpg 3x" sizes="354" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)"/>
+                        <source srcset="./img/jpg/mihail_mob.jpg 1x, ./img/jpg/mihail_mob@2x.jpg 2x, ./img/jpg/mihail_mob@3x.jpg 3x" sizes="450" type="image/jpeg" media="(max-width: 767px)"/>
+                        <img class="img-members" 
+                        src="./img/jpg/mihail_desk.jpg" alt="Михайло Єрмаков" height="260"/>
+                    </picture>
                     <h3 class="title name">Михайло Єрмаков</h3>
                     <p class="text tmembers">UI Designer</p>
                     <div class="cont contmemb">
@@ -304,11 +360,58 @@
                     <span>Підпишіться на розсилку</span>
                     <input type="email" name="email" placeholder="E-mail"/>
                 </label>
-                <button type="submit">Підписатися<svg class="subsicon"><use href="./img/sprite.svg#icon-icon-send"></use></svg></button>
+                <button type="submit" aria-label="Підписатися" aria-expanded="false">Підписатися<svg class="subsicon"><use href="./img/sprite.svg#icon-icon-send"></use></svg></button>
             </form>
         </section>
     </div>
         </footer>
 <script src="./js/modal.js"></script>
+<script>
+    (() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-menu-open]"),
+    closeModalBtn: document.querySelector("[data-menu-close]"),
+    modal: document.querySelector("[data-menu]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("d-m");
+    refs.modal.classList.toggle("open");
+  }
+})();
+</script> 
+<!-- <script>
+(() => {
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
+  const toggleMenu = () => {
+    const isMenuOpen =
+      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+    mobileMenu.classList.toggle('open');
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+  };
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
+
+  // Закрываем мобильное меню на более широких экранах
+  // в случае изменения ориентации устройства.
+  // Close the mobile menu on wider screens if the device orientation changes
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove('open');
+    openMenuBtn.setAttribute('aria-expanded', false);
+    bodyScrollLock.enableBodyScroll(document.body);
+    document.body.classList.toggle("d-e");
+  });
+})();
+</script> -->
 </body>
 </html>

@@ -1,0 +1,51 @@
+.logo {
+    text-decoration: none;
+    
+    &>.logo-part-dark {
+    color: #000000;
+    }
+    
+    &>.logo-part-light {
+    color: #ffffff;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: inline-block;
+        margin-top: 16px;
+        margin-left: 15px;
+
+        @include font-famstyl;
+        // font-family: 'Raleway';
+        // font-style: normal;
+        @include font($fw: 700, $fs: 24px, $lh: 1.16); 
+        // font-weight: 700;
+        // font-size: 24px;
+        // line-height: 28px;
+        // letter-spacing: 0.03em;
+    }
+
+    @media screen and (min-width: $tab) and (max-width: 1199px) {
+        @include font-famstyl;
+        // font-family: 'Raleway';
+        // font-style: normal;
+        @include font($fw: 700, $fs: 24px, $lh: 1.16); 
+        // font-weight: 700;
+        // font-size: 24px;
+        // line-height: 28px;
+        // letter-spacing: 0.03em;
+    }
+
+    @media screen and (min-width: $desk) {
+        
+        font-family: 'Raleway', sans-serif;
+        @include font($fw: 700, $fs: 26px, $lh: 1.2);
+       // font-weight: 700;
+       // font-size: 26px;
+       // line-height: 1.2;
+    
+       // /* identical to box height */
+       // letter-spacing: 0.03em;
+    }
+}
+
+

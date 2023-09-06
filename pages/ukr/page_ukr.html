@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page about my skill</title>
-    <link rel="icon" href="./img/png/favicon.png" sizes="32x32" type="image/png" /> <!-- Иконка на вкладке, use "type" - image/png image/svg image/x-icon Размер: 16х16 32х32 180х180 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+    <meta name="referrer" content="unsafe-url" />
+    <!-- <meta name="Access-Control-Allow-Methods" content="GET, POST, PATCH, HEAD, OPTIONS" /> -->
+    <meta http-equiv="Content-Security-Policy" content="GET, POST, PATCH, HEAD, OPTIONS" />
+    <meta http-equiv="Allow" content="GET, POST, PATCH, HEAD, OPTIONS" />
+    <title>Сторінка о моїх навиках</title>
+    <script>
+        "use strict";
+        const timeStartLoadingPage = Date.now();
+    </script>
+    <link rel="icon" href="../../img/png/favicon.png" sizes="32x32" type="image/png" /> <!-- Иконка на вкладке, use "type" - image/png image/svg image/x-icon Размер: 16х16 32х32 180х180 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"> -->
    <!-- <link rel="stylesheet" href="./css/modern-normalize.css"> -->
    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
    <!-- <link rel="stylesheet" href="./SASS/main.css" /> -->
@@ -103,6 +111,7 @@ body {
     font-size: 14px;
     line-height: 1.2;
     font-display: swap; /* use "swap" (better) or use "optional", also exist "fallback" (100ms waiting and hav'nt refresh), not use "auto" and "block". */
+    transition: background-color linear 250ms;
 }
 
 header, main, footer {
@@ -110,16 +119,18 @@ header, main, footer {
 }
 
 @keyframes Animtxt {
-    0% {opacity: 0;}
-    75% {opacity: 0;}
+    0% {opacity: 0; overflow: hidden;}
+    75% {opacity: 0; overflow: hidden;}
+    95% {overflow: hidden;}
     100% {opacity: 1;}
 }
 
 .magic {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     background-image: url(../../img/jpg/surprize\ 224x224.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -150,6 +161,48 @@ header, main, footer {
     50% {opacity: 1;}
     100% {  opacity: 0;}
 }
+
+.time, .visit {
+    text-align: center;
+    margin: 3px 15px 10px 15px;
+    font-size: 12px;
+}
+
+.theme-body {
+        background-color: #2d3b4e; /* or use #4e2d2d; */
+        color: #ffffff;
+    }
+
+    /* For current page */
+    .page__basic__footer {
+        border-top: 1px solid var(--secondary-color);
+    }
+
+    .none {
+        display: none;
+    }
+
+    /* That's for Bandcamp */
+
+    @media screen and (max-width: 1099px) {
+        .bandcamp {
+        display: block;
+        /* padding-left: 57px; that's for standart form */
+        margin-left: auto;
+        margin-bottom: 5px;
+        margin-right: auto;
+    }
+    }
+
+    @media screen and (min-width: 1100px) {
+        .bandcamp {
+        margin-left: 10px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    }
+
+
     </style>
 </head>
 
@@ -157,22 +210,360 @@ header, main, footer {
     <div class="magic">
         <!-- <h1><span class="namedecor"></span></h1> -->
     </div>
+    <div class="gallery__modal" modal-gallery>
+        <button class="gallery__modal__button" type="button" aria-label="close modal gallery" close-modal-gallery>
+            <svg class="gallery__modal__button__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <path d="M30.721 6.774l-9.197 9.253 9.197 9.198c0.385 0.384 0.385 1.007 0 1.392l-4.176 4.175c-0.383 0.385-1.006 0.385-1.391 0l-9.182-9.182-9.127 9.182c-0.384 0.385-1.007 0.385-1.392 0l-4.175-4.175c-0.384-0.385-0.384-1.008 0-1.392l9.127-9.182-9.126-9.126c-0.384-0.384-0.384-1.007 0-1.392l4.175-4.175c0.384-0.385 1.007-0.385 1.392 0l9.11 9.11 9.199-9.253c0.385-0.385 1.008-0.385 1.391 0l4.176 4.175c0.383 0.385 0.383 1.008-0.001 1.392z"></path>
+            </svg>
+        </button>
+        <picture>
+            <source srcset="../../img/webp/Visual Studio Code.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Visual Studio Code.jpg" type="image/jpeg" />
+            <img photo-one class="gallery__modal__content-first" src="../../img/jpg/Visual Studio Code.jpg" width="300" alt="Visual Studio Code" style="display: block;"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/EQ_opt.webp" type="image/webp"/>
+            <source srcset="../../img/jpg/EQ_opt.jpg" type="image/jpeg"/>
+            <img photo-two class="gallery__modal__content-third__one" src="../../img/jpg/EQ_opt.jpg" width="300" alt="FL Studio 20.0"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/EQ2_opt.webp" type="image/webp"/>
+            <source srcset="../../img/jpg/EQ2_opt.jpg" type="image/jpeg"/>
+            <img photo-three class="gallery__modal__content-third__two" src="../../img/jpg/EQ2_opt.jpg" width="300" alt="FL Studio 20.0"/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Anatolii.webp 1x, ../../img/webp/Anatolii@2x.webp 2x" type="image/webp"/>
+            <source srcset="../../img/jpg/Anatolii.jpg 1x, ../../img/jpg/Anatolii@2x.jpg 2x" type="image/jpeg"/>
+            <img photo-four class="gallery__modal__content-third__three" src="../../img/jpg/Anatolii.jpg" width="300" alt="Anatolii Ovcharuk with guitar."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Guitarist.webp 1x, ../../img/webp/Guitarist@2x.webp 2x" type="image/webp"/>
+            <source srcset="../../img/jpg/Guitarist.jpg 1x, ../../img/jpg/Guitarist@2x.jpg 2x" type="image/jpeg"/>
+            <img photo-five class="gallery__modal__content-third__four" src="../../img/jpg/Guitarist.jpg" width="300" alt="Anatolii Ovcharuk with guitar."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/academia.webp" type="image/webp" />
+            <source srcset="../../img/jpg/academia.jpg" type="image/jpeg" />
+            <img photo-six class="gallery__modal__content-fiveth__one" src="../../img/jpg/academia.jpg" width="300" alt="Anatolii Ovcharuk near Academy."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Magistr.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Magistr.jpg" type="image/jpeg" />
+            <img photo-seven class="gallery__modal__content-fiveth__two" src="../../img/jpg/Magistr.jpg" width="300" alt="Anatolii Ovcharuk - Masters of National University Odessa Law Academy."/>
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/Screenshot.webp" type="image/webp" />
+            <source srcset="../../img/jpg/Screenshot.jpg" type="image/jpeg" />
+            <img photo-eight class="gallery__modal__content-fiveth__three" src="../../img/jpg/Screenshot.jpg" width="300" alt="Anatolii Ovcharuk visited GRINGO." />
+        </picture>
+        <picture>
+            <source srcset="../../img/webp/okno_v_americu.webp" type="image/webp" />
+            <source srcset="../../img/jpg/okno_v_americu.jpg" type="image/jpeg" />
+            <img photo-nine class="gallery__modal__content-fiveth__four" src="../../img/jpg/okno_v_americu.jpg" width="300" alt="Window on America logo."/>
+        </picture>
+    </div>
     <header class="page__basic__header">
-        <section>
+        <section class="portfolio">
+            <picture>
+                <source srcset="../../img/webp/Personal.webp 1x, ../../img/webp/Personal@2x.webp 2x" type="image/webp" />
+                <source srcset="../../img/jpg/Personal.jpg 1x, ../../img/jpg/Personal@2x.jpg 2x" type="image/jpeg" />                
+                <img class="portfolio__foto" src="../../img/jpg/Personal.jpg" alt="Anatolii Ovcharuk" width="200" />
+            </picture>
+            <h1 class="portfolio__first__title" ><span class="portfolio__first__title__part-one">Анатолій Овчарук</span><span class="portfolio__first__title__part-two">Персональна сторінка о моїх навиках</span></h1>
+        </section>
+        <section class="info">
             <nav>
-
+                <ul class="menu">
+                    <li class="mark__info"><a class="menu__link" href="../../index.html">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#language"></use></svg>                        
+                        <p>Вернутись на сторінку вибору мови</p></a></li>
+                    <li class="mark__info"><a class="menu__link" href="https://github.com/Anatolii-Ovcharuk">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#github" target="_blank"></use></svg>
+                        <p>Просмотр профіля на GitHub</p></a></li>
+                    <li class="mark__info"><a class="menu__link" href="https://telegram.me/ovcharuk_tolik" target="_blank">
+                        <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#telegram"></use></svg>
+                        <p>Зв'язатись через Telegram</p></a></li>
+                </ul>
             </nav>
         </section>
+        <section class="info addition">
+            <ul>
+                <!-- <li class="mark__info"><a class="menu__link" href="">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#spotify"></use></svg>                    
+                    <p>Слушать мои песни в Spotify</p></a></li> -->
+                <li class="mark__info"><a class="menu__link" href="https://anatolii-ovcharuk.bandcamp.com/music" target="_blank">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg>                    
+                    <p>Слухати пісни в Bandcamp</p></a></li>
+                <li class="mark__info"><a class="menu__link" href="https://www.instagram.com/ovcharuk.tolik/" target="_blank">
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#icon-instagram"></use></svg>
+                    <p>Аккаунт в Instagram</p></a></li>
+                <li class="mark__info"><a class="menu__link" href="./download/Instrument (links) for WEB-Developer.html" download click-header>
+                    <svg class="menu__link__icon"><use href="../../img/svg/sprite.svg#icon-folder-download"></use></svg>
+                    <p>Інструмент WEB-розробника</p></a></li>
+            </ul>
+        </section>
+        <section class="orientation">
+            <img class="orientation__planet" src="../../img/png/Globe_green.png" width="115" alt="globe"/>
+            <picture>
+                <source srcset="./../img/webp/Starline.webp 1x" type="image/webp" />    
+                <source srcset="./../img/png/Starline.png 1x, ./../img/png/Starline@2x.png 2x" type="image/png" />    
+                <img class="orientation__stars" src="./../img/webp/Starline.webp" width="100" alt="stars"/>
+            </picture>
+        </section>
     </header>
-    <main class="page__basic__main">
-        <section>
+    <main class="page__basic__main" correctMain>
+        <section class="modal" data-modal>
+            <article class="content-first" content-first>
+                <div class="content-block"><h2 class="content-first__title">Мої навики у сфері WEB-розробки.</h2>
+                    <button class="modal__button" type="button" aria-label="close first article" data-modal-close-one content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрити вкладку</button></div>
+                <p class="content-first__txt">Технічні навики: HTML, CSS, JavaScript, React, NodeJS.</p>
+                <p class="content-first__txt">Основи та інструменти: Terminal (Visual Studio Code, Visual Studio 2012), git, github, npm, babel.</p>
+                    <ul class="content-first__block">
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Підтримка ассистивних технологій.</h3><p class="content-first__block__mark__text">Допомагає користувачам знаходити Ваш сайт у перших рядах пошукового результату при дотриманні та застосуванні деяких правил написання коду.</p><h3 class="content-first__block__mark__title">Індивідуальний підхід.</h3><p class="content-first__block__mark__text">Кожен WEB-сайт має свою особливість, і деталі мають бути виконані.</p></li>
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Пріоритетність швидкості сторінок.</h3><p class="content-first__block__mark__text">Вбудовування та об'єднання коду в один файл також сприяє швидкому завантаженню сторінки.</p><h3 class="content-first__block__mark__title">Оптимізація коду та контенту.</h3><p class="content-first__block__mark__text">Дотримання правил мінімізації коду дозволяє скоротити час очікування завантаження сторінок.</p>
+                            <div class="isZoomBlock">
+                            <picture gallery-one>
+                                <source srcset="../../img/webp/Visual Studio Code.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Visual Studio Code.jpg" type="image/jpeg" />
+                                <img class="content-first__block__mark__photo" src="../../img/jpg/Visual Studio Code.jpg" width="250" alt="Visual Studio Code" style="display: block;" />
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div></li>
+                        <li class="content-first__block__mark"><h3 class="content-first__block__mark__title">Створення умов для ефективної роботи</h3><p class="content-first__block__mark__text">Запорука успіху в ефективності полягає у створенні умов та інструментів, які скорочують час на пошуки та виконання певних завдань.</p><p class="content-first__block__mark__text">Для зручності організації в роботі мною був створений інструмент (набір посилань), який Ви можете завантажити за посиланням нижче.</p>
+                            <p class="content-first__block__mark__text__tense">Последняя версия: 1.0</p>
+                            <a class="link" id="count" href="./download/Instrument (links) for WEB-Developer.html" download count><p class="link__txt-first">Завантажити - Instrument (links) for WEB-Developer (Desktop ver., RUS/part ENG, made by Anatolii Ovcharuk)</p><svg class="link__icon-big">
+                                <use href="../../img/svg/sprite.svg#document-file-html1"></use></svg></a>
+                                <p class="content-first__block__mark__text__tense" id="countDownload" countDownload></p></li>
+                    </ul></article>
 
+            <article class="content-second" content-second>
+                <div class="content-block"><h2 class="content-second__title">Технічна підтримка.</h2>
+                    <button class="modal__button" type="button" aria-label="close second article" data-modal-close-two content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                        <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрити вкладку</button></div>
+                <p class="content-second__txt">Навики: Оновлення драйверів, профілактичні перевірки, відновлення даних, збирання та розбирання, апгрейд.</p>
+                <ul class="content-second__block">
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Оновлення драйверів та компонентів. Підтримка працездатності.</h3><p class="content-second__block__mark__text">Оновлення драйверів та компонентів дозволяють використовувати всі ресурси ПК максимально.</p><p class="content-second__block__mark__text">Очищення системи охолодження та продування від пилу запобігає перегріву та виходу з ладу перифірійних та комплектуючих пристроїв.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M27.802 5.197c-2.925-3.194-7.13-5.197-11.803-5.197-8.837 0-16 7.163-16 16h3c0-7.18 5.82-13 13-13 3.844 0 7.298 1.669 9.678 4.322l-4.678 4.678h11v-11l-4.198 4.197z"></path>
+                            <path d="M29 16c0 7.18-5.82 13-13 13-3.844 0-7.298-1.669-9.678-4.322l4.678-4.678h-11v11l4.197-4.197c2.925 3.194 7.13 5.197 11.803 5.197 8.837 0 16-7.163 16-16h-3z"></path>
+                        </svg></li>
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Профілактичні перевірки.</h3><p class="content-second__block__mark__text">Перевірка (тестування) оперативної пам'яті та дискових масивів, а також копіювання та своєчасне архівування (бекап) - сприяють запобіганню втрати або спотворенню даних, та погіршенню стабільності роботи системи.</p><p class="content-second__block__mark__text">Є досвід відновлення даних на програмному рівні. Складність відновлення залежить від кількості маніпуляцій з диском.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+                            <path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+                            <path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+                        </svg></li>
+                    <li class="content-second__block__mark"><h3 class="content-second__block__mark__title">Складання та розбирання, апгрейд.</h3><p class="content-second__block__mark__text">Можливість заміни перифірійних та комплектуючих пристроїв у разі виходу з ладу, а також впровадження нових технологій, покращення характеристик ПК. Складання ПК проводиться в послідовності виконаної розбирання.</p>
+                        <svg class="content-second__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M11.366 22.564l1.291-1.807-1.414-1.414-1.807 1.291c-0.335-0.187-0.694-0.337-1.071-0.444l-0.365-2.19h-2l-0.365 2.19c-0.377 0.107-0.736 0.256-1.071 0.444l-1.807-1.291-1.414 1.414 1.291 1.807c-0.187 0.335-0.337 0.694-0.443 1.071l-2.19 0.365v2l2.19 0.365c0.107 0.377 0.256 0.736 0.444 1.071l-1.291 1.807 1.414 1.414 1.807-1.291c0.335 0.187 0.694 0.337 1.071 0.444l0.365 2.19h2l0.365-2.19c0.377-0.107 0.736-0.256 1.071-0.444l1.807 1.291 1.414-1.414-1.291-1.807c0.187-0.335 0.337-0.694 0.444-1.071l2.19-0.365v-2l-2.19-0.365c-0.107-0.377-0.256-0.736-0.444-1.071zM7 27c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM32 12v-2l-2.106-0.383c-0.039-0.251-0.088-0.499-0.148-0.743l1.799-1.159-0.765-1.848-2.092 0.452c-0.132-0.216-0.273-0.426-0.422-0.629l1.219-1.761-1.414-1.414-1.761 1.219c-0.203-0.149-0.413-0.29-0.629-0.422l0.452-2.092-1.848-0.765-1.159 1.799c-0.244-0.059-0.492-0.109-0.743-0.148l-0.383-2.106h-2l-0.383 2.106c-0.251 0.039-0.499 0.088-0.743 0.148l-1.159-1.799-1.848 0.765 0.452 2.092c-0.216 0.132-0.426 0.273-0.629 0.422l-1.761-1.219-1.414 1.414 1.219 1.761c-0.149 0.203-0.29 0.413-0.422 0.629l-2.092-0.452-0.765 1.848 1.799 1.159c-0.059 0.244-0.109 0.492-0.148 0.743l-2.106 0.383v2l2.106 0.383c0.039 0.251 0.088 0.499 0.148 0.743l-1.799 1.159 0.765 1.848 2.092-0.452c0.132 0.216 0.273 0.426 0.422 0.629l-1.219 1.761 1.414 1.414 1.761-1.219c0.203 0.149 0.413 0.29 0.629 0.422l-0.452 2.092 1.848 0.765 1.159-1.799c0.244 0.059 0.492 0.109 0.743 0.148l0.383 2.106h2l0.383-2.106c0.251-0.039 0.499-0.088 0.743-0.148l1.159 1.799 1.848-0.765-0.452-2.092c0.216-0.132 0.426-0.273 0.629-0.422l1.761 1.219 1.414-1.414-1.219-1.761c0.149-0.203 0.29-0.413 0.422-0.629l2.092 0.452 0.765-1.848-1.799-1.159c0.059-0.244 0.109-0.492 0.148-0.743l2.106-0.383zM21 15.35c-2.402 0-4.35-1.948-4.35-4.35s1.948-4.35 4.35-4.35 4.35 1.948 4.35 4.35c0 2.402-1.948 4.35-4.35 4.35z"></path>
+                        </svg></li>
+                </ul></article>
+
+            <article class="content-third" content-third>
+                <div class="content-block"><h2 class="content-third__title">Мої навики у музичній сфері.</h2><button class="modal__button" type="button" aria-label="close third article" data-modal-close-three content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрити вкладку</button></div>
+                    <p class="content-third__txt">Технічні навики (редактори): FL Studio, Аudacity. Робота із форматами аудіо: MP3, WAV, OGG, FLAC, MIDI.</p><ul class="content-third__block"> 
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Як можна використовувати ці знання у сфері WEB-розробки?</h3><p class="content-third__block__mark__text">Створення на сторінці голосової реклами, фонове відтворення мелодій, озвучення інформації для відвідувачів сторінки, оптимізація аудіофайлів. Використання інструменту WEB Audio API розширює можливості програмування в музичній сфері. </p><p class="content-third__block__mark__text">Приклад: ця сторінка має фонове відтворення (відтворення файлу - 20 сек.) OGG формату розміром 270 Кбайт (0,3 Мбайт) з потоком 112 Кбіт/с без буферизації через "WEB Audio API". Дозволяє "зациклити" мелодію (як один із способів оптимізації розміру сторінки).</p>
+                    <img class="content-third__block__mark__photo" src="../../img/Original/Guitar_one.png" width="110" alt="Guitar"/></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Робота з інструментами запису та аудіоредактора, створення та обробка аудіо-контенту.</h3><p class="content-third__block__mark__text">Існує безліч форматів, але для web-розробки найоптимальнішим за критеріями "якість" - "розмір" є формат MP3. Оптимальна якість аудіофайлу для сайту – потік 128/112 Кбіт/с. Якість не буде помітною для людини зі звичайними звуковими даними.</p>
+                        <div class="content-third__block__mark__example">
+                            <div class="show__container">
+                            <picture>
+                                <source srcset="../../img/webp/EQ_opt.webp" type="image/webp"/>
+                                <source srcset="../../img/jpg/EQ_opt.jpg" type="image/jpeg"/>
+                                <img class="content-third__block__mark__example__photo one" src="../../img/jpg/EQ_opt.jpg" height="85" alt="FL Studio 20.0" gallery-two/>
+                            </picture>
+                            <p class="show__container__text one">Результат покращення звучання досягається шляхом підвищення чутливості до низьких частот та зниження занадто високих частот (там де це не потрібно). Для збільшення картинки - клацніть на фото.</p></div>
+                            <div class="show__container">
+                            <picture>
+                                <source srcset="../../img/webp/EQ2_opt.webp" type="image/webp"/>
+                                <source srcset="../../img/jpg/EQ2_opt.jpg" type="image/jpeg"/>
+                                <img class="content-third__block__mark__example__photo two" src="../../img/jpg/EQ2_opt.jpg" height="85" alt="FL Studio 20.0" gallery-three/>
+                            </picture>
+                            <p class="show__container__text two">Балансування є обов'язковим після коригування частот. Для збільшення картинки - клацніть на фото.</p></div>
+                        </div></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Обробка та оптимізація аудіо-контенту з пріоритетом якості.</h3><p class="content-third__block__mark__text">Запис гітари та обробка плагінами досягає високої якості звучання. Запис відбувається за технологією ASIO. Приклад обрізаної версії пісні White Stripes - Seven Nation Army (Anatolii Ovcharuk):</p><button class="content-third__block__mark__button" href="" type="button" aria-label="stop/start loop music"><svg class="content-third__block__mark__button__icon"><use href="../../img/svg/sprite.svg#play"></use></svg><p class="content-third__block__mark__button__txt">Вкл./Викл. фонову музику.</p><svg class="content-third__block__mark__button__icon"><use href="../../img/svg/sprite.svg#pause"></use></svg></button><p class="content-third__block__mark__text">Запис чистої гітари без обробки.</p><audio class="content-third__audio" controls src="../../audio/mp3/Guitar - Cut version, 128kbps.mp3"></audio><p class="content-third__block__mark__text">Фінальний варіант запису з обробкою.</p><audio class="content-third__audio" controls src="../../audio/mp3/White Stripes - Seven Nation Army (by Anatolii Ovcharuk, Cut Version, 128kbps).mp3"></audio><p class="content-third__block__mark__text">Розмір 1,5 Мбайт при потоці – 320 кбіт/с. тривалістю 40 сек. </p><p class="content-third__block__mark__text">Розмір 620 Кбайт (0,6 Мбайт) при потоці – 128 кбіт/с. тривалістю 40 сек. </p></li>
+                    <li class="content-third__block__mark"><h3 class="content-third__block__mark__title">Як я отримав навик ?</h3><p class="content-third__block__mark__text__tense">"Що таке 5 хвилин у нашому житті... Це ціла пісня." Анатолій Овчарук</p><p class="content-third__block__mark__text">Захоплюючись людьми з музичною діяльністю, присвятив себе самонавчанню на акустичній гітарі з 2012 року. Після 4-х років гри на акустичній гітарі, вирішивши перейти на "новий рівень", перейшов на електрогітару, аудіоредактори та звукорежисуру. Ця діяльність вважається одним із багатьох моїх захоплень...</p><p class="content-third__block__mark__text">На сьогодні є композитором, автором.</p>
+                        <a class="link" href="https://anatolii-ovcharuk.bandcamp.com/music" target="_blank">
+                            <svg class="link__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg>Слухати мої пісні в Bandcamp</a>
+                        <!-- <a class="link" href=""><svg class="link__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.119-16-16-16zM23.363 23.119c-0.319 0.481-0.881 0.637-1.363 0.319-3.762-2.319-8.481-2.8-14.081-1.519-0.563 0.163-1.037-0.238-1.2-0.719-0.162-0.563 0.237-1.038 0.719-1.2 6.081-1.363 11.363-0.8 15.519 1.762 0.563 0.238 0.644 0.875 0.406 1.356zM25.281 18.719c-0.4 0.563-1.119 0.8-1.681 0.4-4.319-2.637-10.881-3.438-15.919-1.837-0.638 0.163-1.362-0.163-1.519-0.8-0.162-0.637 0.162-1.363 0.8-1.519 5.838-1.762 13.037-0.881 18 2.163 0.475 0.238 0.719 1.038 0.319 1.594zM25.438 14.238c-5.119-3.037-13.681-3.363-18.563-1.838-0.8 0.238-1.6-0.238-1.838-0.963-0.237-0.8 0.237-1.6 0.963-1.838 5.681-1.681 15.038-1.363 20.962 2.162 0.719 0.4 0.962 1.363 0.563 2.081-0.406 0.556-1.363 0.794-2.087 0.394z"></path>
+                            </svg> Прослушать мои песни на Spotify </a> -->
+                        <div class="content-third__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Anatolii.webp 1x, ../../img/webp/Anatolii@2x.webp 2x" type="image/webp"/>
+                                <source srcset="../../img/jpg/Anatolii.jpg 1x, ../../img/jpg/Anatolii@2x.jpg 2x" type="image/jpeg"/>
+                                <img class="content-third__block__mark__gallery__photo" src="../../img/jpg/Anatolii.jpg" height="95" alt="Anatolii Ovcharuk with guitar." gallery-four/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Guitarist.webp 1x, ../../img/webp/Guitarist@2x.webp 2x" type="image/webp"/>
+                                <source srcset="../../img/jpg/Guitarist.jpg 1x, ../../img/jpg/Guitarist@2x.jpg 2x" type="image/jpeg"/>
+                                <img class="content-third__block__mark__gallery__photo" src="../../img/jpg/Guitarist.jpg" height="95" alt="Anatolii Ovcharuk with guitar." gallery-five/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                </ul></article>
+
+            <article class="content-fourth" content-fourth>
+                <div class="content-block"><h2 class="content-fourth__title">Приклад моїх проектів.</h2><button class="modal__button" type="button" aria-label="close fourth article" data-modal-close-four content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрити вкладку</button></div>
+                <!-- <p class="content-fourth__txt">  </p> -->
+                <ul class="content-fourth__block">
+                    <li class="content-fourth__block__mark"><a class="content-fourth__block__link" href="../../projects/Practic/index.html" target="_blank">
+                        <!-- <h3 class="content-fourth__block__mark__title"></h3> -->
+                        <picture>
+                            <source srcset="../../img/webp/Practic.webp" type="image/webp" />
+                            <source srcset="../../img/jpg/Practic.jpg" type="image/jpeg" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/jpg/Practic.jpg" height="95" alt="First practic"/>
+                        </picture>
+                        <div class="content-fourth__block__mark__window">
+                            <p class="content-fourth__block__mark__text">Моя практична робота.</p>
+                            <p class="content-fourth__block__mark__text">Перший досвід у WEB-розробці демонструє отримані мною знання та мої можливості.</p>                              
+                        </div>
+                    </a></li>
+                    <li class="content-fourth__block__mark"><a class="content-fourth__block__link" href="../../projects/Happy New Year/page.html" target="_blank">
+                        <!-- <h3 class="content-fourth__block__mark__title"></h3> -->
+                        <picture>
+                            <source srcset="../../img/webp/Happy_New_Year.webp" type="image/webp" />
+                            <source srcset="../../img/jpg/Happy_New_Year.jpg" type="image/jpeg" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/jpg/Happy_New_Year.jpg" height="95" alt="Practic on theme Happy New Year"/>
+                        </picture>
+                        <div class="content-fourth__block__mark__window">
+                            <p class="content-fourth__block__mark__text">Новорічна вітальна листівка.</p>
+                            <p class="content-fourth__block__mark__text">Особливість сторінки: Вбудований шрифт, Анімація та сценарій, Використання технології ВЕМ та препроцесора SASS (у форматі SCSS). Адаптивний до пристроїв.</p>                              
+                        </div>        
+                    </a></li>
+                    <li class="content-fourth__block__mark">
+                        <picture>
+                            <source srcset="../../img/webp/warning.webp" type="image/webp" />
+                            <source srcset="../../img/png/warning.png" type="image/png" />
+                            <img class="content-fourth__block__mark__photo" src="../../img/png/warning.png" height="95" alt="Not ready image." />
+                        </picture>
+                            <div class="content-fourth__block__mark__window"><p class="content-fourth__block__mark__text">Тимчасово недоступно.</p></div>
+                    </li>
+                </ul></article>
+                
+            <article class="content-fiveth" content-fiveth>
+                <div class="content-block"><h2 class="content-fiveth__title">Інші навики...</h2><button class="modal__button" type="button" aria-label="close fiveth article" data-modal-close-five content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Закрити вкладку</button></div>
+                <p class="content-fiveth__txt">Навики: Юриспруденція, володіння трьома мовами, електрика та радіотехніка… (Це не весь перелік моїх навиків).</p>
+                <ul class="content-fiveth__block">
+                    <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Юриспруденція.</h3><p class="content-fiveth__block__mark__text">Бакалавр та магістр Національного університету "Одеська Юридична Академія" (далі за текстом - НУ "ОЮА") за спеціальністю "Правознавство".</p>
+                        <div class="content-fiveth__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/academia.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/academia.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo-big" src="../../img/jpg/academia.jpg" height="170" alt="Anatolii Ovcharuk near Academy." gallery-six/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Magistr.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Magistr.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo-big" src="../../img/jpg/Magistr.jpg" height="170" alt="Anatolii Ovcharuk - Masters of National University Odessa Law Academy." gallery-seven/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                    <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Володіння трьома мовами.</h3><p class="content-fiveth__block__mark__text">Англійська мова, українська мова, російська - Знання цих мов мною отримані ще зі шкільних часів. У період мого навчання у НУ "ОЮА" я закріпив ці знання.</p>
+                        <p class="content-fiveth__block__mark__text">Відвідуючи розмовні клуби з англійської мови "GRINGO" та "Window on America Kherson" (безкоштовна програма посольства США) мною було набуто досвіду вільного спілкування англійською мовою.</p> 
+                        <!-- https://www.instagram.com/woakherson/ https://for.lib.kherson.ua/woa-about.htm https://www.instagram.com/gringo.kherson/ -->
+                        <p class="content-fiveth__block__mark__text__tense">Рівень української мови: Відмінний.</p>
+                        <p class="content-fiveth__block__mark__text__tense">Рівень української мови: Відмінний.</p>
+                        <p class="content-fiveth__block__mark__text__tense">Рівень англійської мови: Середній.</p>
+                        <div class="content-fiveth__block__mark__gallery">
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/Screenshot.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/Screenshot.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo" src="../../img/jpg/Screenshot.jpg" height="95" alt="Anatolii Ovcharuk visited GRINGO." gallery-eight />
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                            <div class="isZoomBlock">
+                            <picture>
+                                <source srcset="../../img/webp/okno_v_americu.webp" type="image/webp" />
+                                <source srcset="../../img/jpg/okno_v_americu.jpg" type="image/jpeg" />
+                                <img class="content-fiveth__block__mark__gallery__photo" src="../../img/jpg/okno_v_americu.jpg" height="95" alt="Window on America logo." gallery-nine/>
+                            </picture><div class="zoom"><svg class="zoom__icon"><use href="../../img/svg/sprite.svg#zoom-in"></use></svg></div></div>
+                        </div></li>
+                        <li class="content-fiveth__block__mark"><h3 class="content-fiveth__block__mark__title">Електрика та радіотехніка.</h3><p class="content-fiveth__block__mark__text">Вважаючи, що електрика – це наше майбутнє, виявлено інтерес до таких спеціальностей, як електрика та радіотехніка.</p>
+                            <p class="content-fiveth__block__mark__text">Базові знання з радіотехніки дозволяють знайти несерйозні поломки та усунути їх.</p>
+                            <p class="content-fiveth__block__mark__text">Фундаментальні знання з електрики дозволяють розібратися в працездатності енергомережі в різних ситуаціях, а також знайти рішення щодо безперебійного енергозабезпечення.</p>
+                            <svg class="content-fiveth__block__mark__icon" width="32" height="32" viewBox="0 0 32 32">
+                                <path d="M12 0l-12 16h12l-8 16 28-20h-16l12-12z"></path>
+                            </svg>
+                </ul></article>
+
+            <article class="content-sixth" content-sixth><button class="modal__button addrgba" type="button" aria-label="close sixth article" data-modal-close-six content-close><svg version="1.1" class="modal__button__icon" width="32" height="32" viewBox="0 0 32 32">
+                <path d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z"></path></svg>Повернутись на головну</button>
+                <h2 class="content-sixth__title">Поточна вкладка тимчасово не працює.</h2><p class="content-sixth__txt">Вкладка зарезервована на майбутнє. Зайдіть пізніше... ⏳😁</p></article>
+        </section>
+        <section class="page__basic__main__block">
+            <ul class="skill left">
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open first article" data-modal-open1>
+                    <!-- Not use "gif" format - Because very big size and gif format cann't be optimization -->
+                    <!-- <img class="skill__mark__picture" src="../../img/gif/Night.gif" alt="Night and computer"/> -->
+                    <picture>
+                        <source srcset="../../img/webp/Night.webp 1x" type="image/webp" />
+                        <source srcset="../../img/jpg/Night.jpg 1x" type="image/jpeg" />
+                        <img class="skill__mark__picture" src="../../img/jpg/Night.jpg" alt="Night and computer" width="340"/>
+                    </picture>
+                    <h2 class="skill__mark__txt first">Мої навики у сфері WEB-розробки</h2>
+                </button>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open second article" data-modal-open2>
+                        <!-- Use "div" for animation or "img"... P.S. JPEG need to optimization -->
+                        <div class="skill__mark__picture animation__block-one"></div>
+                        <!-- <img class="skill__mark__picture animation__block" src="../../img/jpg/chip_shema_dark.jpg" alt="Chip shema"/> -->
+                        <h2 class="skill__mark__txt second">Технічна підтримка</h2>
+                    </button>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open third article" data-modal-open3>
+                        <picture>
+                            <source srcset="../../img/webp/Home_Studio.webp 1x, ../../img/webp/Home_Studio@2x.webp 2x" type="image/webp" />
+                            <source srcset="../../img/jpg/Home_Studio.jpg 1x, ../../img/jpg/Home_Studio@2x.jpg 2x" type="image/jpeg" />    
+                            <img class="skill__mark__picture" src="../../img/jpg/Home_Studio.jpg" alt="Home studio" width="340"/>
+                        </picture>
+                        <div class="skill__mark__txt third">
+                            <p class="skill__mark__txt__block-one">Мої навики у музичній сфері</p>
+                            <p class="skill__mark__txt__block-two">(На фото моя домашня студія)</p></div>
+                            <h2 class="skill__mark__title">Мої навики у музичній сфері</h2>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <section class="page__basic__main__block">
+            <ul class="skill right">
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open fourth article" data-modal-open4>
+                        <div class="skill__mark__picture animation__block-two"></div>    
+                            <h2 class="skill__mark__txt fourth">Приклади моїх проектів</h2>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open fiveth article" data-modal-open5>
+                        <picture>
+                            <source srcset="../../img/webp/fon_640.webp 1x" type="image/webp" />
+                            <source srcset="../../img/jpg/fon_640.jpg 1x" type="image/jpeg" />
+                            <img class="skill__mark__picture" src="../../img/jpg/fon_640.jpg" alt="Night time" width="340"/>    
+                        </picture>
+                        <h2 class="skill__mark__txt fiveth">Інші навики...</h2>
+                </li>
+                <li class="skill__mark">
+                    <button class="skill__mark__button" href="" type="button" aria-label="open sixth article" data-modal-open6>
+                        <picture>
+                            <source srcset="../../img/webp/warning.webp 1x" type="image/webp" />
+                            <source srcset="../../img/png/warning.png 1x" type="image/png" />
+                            <img class="skill__mark__picture" src="../../img/png/warning.png" alt="Warning" width="340"/>
+                        </picture>
+                        <p class="skill__mark__txt sixth">Вкладка недоступна. Зарезервовано на майбутнє.</p>
+                </li>
+            </ul>
         </section>
     </main>
     <footer class="page__basic__footer">
-        <section>
+        <section class="footer__menu">
             <address>
-                <p class="contact">Contact: <a class="contact__telegram" href="tg://resolve?domain=@ovcharuk_tolik">&nbsp
+                <p class="contact">Контакт: <a class="contact__telegram" href="https://telegram.me/ovcharuk_tolik">&nbsp
                     <svg class="contact__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 0L0 13.5L7.66994 16.3407L19.5 5.25002L10.5017 17.3896L10.509 17.3923L10.5 17.3896V24.0001L14.8013 18.982L20.2501 21.0001L24 0Z"/></svg>
                     Telegram - @ovcharuk_tolik</a></p>
                 <!-- Ещё есть два варианта подключить Telegram:
@@ -181,13 +572,121 @@ header, main, footer {
                     2. https://telegram.me/ВашеИмяПользователя
                     -->
             </address>
-            <audio class="loop" src="../../audio/mp3/loop-112_eq.mp3" controls autoplay loop></audio>
+            <button class="footer__menu__button-loop" href="" type="button" aria-label="stop/start loop music"><svg class="footer__menu__button-loop__icon"><use href="../../img/svg/sprite.svg#play"></use></svg><p class="footer__menu__button-loop__txt">Вкл./Викл. фонову музику.</p><svg class="footer__menu__button-loop__icon"><use href="../../img/svg/sprite.svg#pause"></use></svg></button>
+            <button class="footer__menu__button-theme" href="" type="button" aria-label="change background theme on page" theme-btn><svg class="footer__menu__button-theme__icon"><use href="../../img/svg/sprite.svg#light"></use></svg><p class="footer__menu__button-theme__txt">Зміна теми</p><svg class="footer__menu__button-theme__icon"><use href="../../img/svg/sprite.svg#moon"></use></svg></button>
+            <button class="footer__menu__button-promo" href="" type="button" aria-label="get promocode for discount of my song in bandcamp" promo><svg class="footer__menu__button-promo__icon"><use href="../../img/svg/sprite.svg#ticket"></use></svg><p class="footer__menu__button-promo__txt">Промокод</p><svg class="footer__menu__button-promo__icon"><use href="../../img/svg/sprite.svg#bandcamp"></use></svg></button>
+            <!-- In next line - I'm not create that form. That's standart form "bandcamp". -->
+            <iframe class="bandcamp" scrolling="no" style="border: 0;width: 177px;height: 33px;" src="https://bandcamp.com/band_follow_button_classic/3264840929"></iframe>
+            <audio class="loop" data-status="play" src="../../audio/ogg/loop-112_eq_cut.ogg" loop>
+                <source src="../../audio/ogg/loop-112_eq_cut.ogg" type="audio/ogg; codecs=vorbis" /> 
+                <source src="../../audio/mp3/loop-112_eq_cut.mp3" type="audio/mpeg" /> 
+                <source src="../../audio/wav/loop-112_eq_cut.wav" type="audio/wav" />
+            </audio>
+        </section>
+        <section class="stats">
+            <p time class="time" id="time"></p>
+            <p class="visit" id="visit" visit ></p>
         </section>
     </footer>
-    <!-- <script src=""></script> -->
+    <script src="../../js/modal.js" type="module"></script>
+    <script src="../../js/current_date_module.js" type="module"></script>
+    <!-- <script src="../../js/count_download_module.js" type="module"></script> -->
+    <script src="../../js/visit_and_time_loading_counter_module.js" type="module"></script>
     
-    <!-- <script>
+    <script type="module">
+        // THEME SCRIPT
+        // "use strict";
+        const theme = {
+            themeBtn: document.querySelector("[theme-btn]"),
+        };
 
-    </script> -->
+        theme.themeBtn.addEventListener("click", toggleTheme);
+
+        function toggleTheme() {
+        document.body.classList.toggle("theme-body");
+    }
+    </script>
+
+    <script type="module">
+        // PROMO SCRIPT
+        // "use strict";     
+        const messagePromo = () => alert('Знижка 10% на будь-яку мою пісню в Bandcamp за промокодом: "github-2023" 😀. З повагою до Вас, Анатолій Овчарук.');
+        // function messagePromo () {alert('Знижка 10% на будь-яку мою пісню в Bandcamp за промокодом: "github-2023" 😀. З повагою до Вас, Анатолій Овчарук.')};
+        document.querySelector("[promo]").addEventListener("click", messagePromo);   
+    </script>
+
+    <script type="module">
+    // AUDIO LOOP SCRIPT
+    // "use strict";
+    const refsAudio = document.querySelector("audio.loop");
+    const refsButton = document.querySelector(".footer__menu__button-loop");
+    const refsSecondaryButton = document.querySelector(".content-third__block__mark__button");
+    // console.log(refsAudio);
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    
+    //-----------------------------------
+    // STEREO PARAMS!
+    // const buffer = new AudioBuffer(context, {
+    //   numberOfChannels: 2,
+    //   length: 22050,
+    //   sampleRate: 44100,
+    // });
+    
+    // MONO PARAMS!
+    // const buffer = new AudioBuffer(context, {
+    //   numberOfChannels: 1,
+    //   length: 22050,
+    //   sampleRate: 22050,
+    // });
+    
+    const buffer = context.createBuffer(2, context.sampleRate * 1, context.sampleRate);
+    // const channelData = buffer.getChannelData(0);
+    // console.log(buffer);
+    
+    //-----------------------------------
+    
+    
+    
+    const volume = context.createGain();
+    volume.gain.value = 0.9;
+    
+    const delay = context.createDelay();
+    delay.delayTime.value = 0.01;
+    
+    context.createMediaElementSource(refsAudio).connect(delay).connect(volume).connect(context.destination);
+    
+    // console.log(refsAudio)
+    // console.log(context.destination);
+    // console.log(context.createMediaElementSource(refsAudio))
+    // console.log(context);
+    // console.log(delay);
+    // console.log(refsAudio.duration);
+    
+    refsButton.addEventListener("click", () => init());
+    refsSecondaryButton.addEventListener("click", () => init());
+    
+    function init () {
+        if (refsAudio.getAttribute("data-status") === "stop") {
+            startPlay();
+        } else if (refsAudio.getAttribute("data-status") === "play") {
+            stopPlay();
+        }
+    }
+
+    function startPlay () {
+        refsAudio.setAttribute("data-status", "play")
+        refsAudio.play()
+    }
+    
+    function stopPlay () {
+        refsAudio.setAttribute("data-status", "stop")
+        // volume.gain.exponentialRampToValueAtTime(0.001, context.currentTime + 2.5);
+        refsAudio.pause();
+    }
+    
+    refsAudio.play();
+        </script>
+
+    <script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
 </body>
 </html>
