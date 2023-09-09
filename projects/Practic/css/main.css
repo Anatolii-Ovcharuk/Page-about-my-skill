@@ -894,17 +894,17 @@ header {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 1), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 767px) and (min-resolution: 96dpi), screen and (max-width: 767px) and (min-resolution: 1dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_mob.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_mob.jpg);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_mob@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_mob@2x.jpg);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 288dpi), screen and (max-width: 767px) and (min-resolution: 3dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_mob@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_mob@3x.jpg);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -927,17 +927,17 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_tab.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_tab.jpg);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_tab@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_tab@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Header_tab@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Header_tab@3x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -957,17 +957,17 @@ header {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Img_desk.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Img_desk.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Img_desk@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Img_desk@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   main .section.general {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/jpg/Img_desk@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../img/jpg/Img_desk@3x.jpg);
   }
 }
 
@@ -1119,17 +1119,17 @@ header {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 1), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 767px) and (min-resolution: 96dpi), screen and (max-width: 767px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1.png);
+    background-image: url(./../img/png/antenna\ 1.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@2x.png);
+    background-image: url(./../img/png/antenna\ 1@2x.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 288dpi), screen and (max-width: 767px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@3x.png);
+    background-image: url(./../img/png/antenna\ 1@3x.png);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1139,17 +1139,17 @@ header {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 1), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 767px) and (min-resolution: 96dpi), screen and (max-width: 767px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1.png);
+    background-image: url(./../img/png/clock\ 1.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@2x.png);
+    background-image: url(./../img/png/clock\ 1@2x.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 288dpi), screen and (max-width: 767px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@3x.png);
+    background-image: url(./../img/png/clock\ 1@3x.png);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1159,17 +1159,17 @@ header {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 1), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 767px) and (min-resolution: 96dpi), screen and (max-width: 767px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1.png);
+    background-image: url(./../img/png/diagram\ 1.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@2x.png);
+    background-image: url(./../img/png/diagram\ 1@2x.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 288dpi), screen and (max-width: 767px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@3x.png);
+    background-image: url(./../img/png/diagram\ 1@3x.png);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1179,17 +1179,17 @@ header {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 1), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 767px) and (min-resolution: 96dpi), screen and (max-width: 767px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/astronaut\ 1.png);
+    background-image: url(./../img/png/astronaut\ 1.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/astronaut\ 1@2x.png);
+    background-image: url(./../img/png/astronaut\ 1@2x.png);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 288dpi), screen and (max-width: 767px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/astronaut\ 1@3x.png);
+    background-image: url(./../img/png/astronaut\ 1@3x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1232,17 +1232,17 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1.png);
+    background-image: url(./../img/png/antenna\ 1.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@2x.png);
+    background-image: url(./../img/png/antenna\ 1@2x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@3x.png);
+    background-image: url(./../img/png/antenna\ 1@3x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1252,17 +1252,17 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1.png);
+    background-image: url(./../img/png/clock\ 1.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@2x.png);
+    background-image: url(./../img/png/clock\ 1@2x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@3x.png);
+    background-image: url(./../img/png/clock\ 1@3x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1272,17 +1272,17 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1.png);
+    background-image: url(./../img/png/diagram\ 1.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@2x.png);
+    background-image: url(./../img/png/diagram\ 1@2x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@3x.png);
+    background-image: url(./../img/png/diagram\ 1@3x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1306,17 +1306,17 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group.png), url(../../img/png/Star.png), url(../../img/png/Star.png), url(../../img/png/Star.png), url(../../img/png/Star.png);
+    background-image: url(./../img/png/Group.png), url(./../img/png/Star.png), url(./../img/png/Star.png), url(./../img/png/Star.png), url(./../img/png/Star.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png);
+    background-image: url(./../img/png/Group@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png);
+    background-image: url(./../img/png/Group@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1348,17 +1348,17 @@ header {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1.png);
+    background-image: url(./../img/png/antenna\ 1.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@2x.png);
+    background-image: url(./../img/png/antenna\ 1@2x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-one::before {
-    background-image: url(../../img/png/antenna\ 1@3x.png);
+    background-image: url(./../img/png/antenna\ 1@3x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1368,17 +1368,17 @@ header {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1.png);
+    background-image: url(./../img/png/clock\ 1.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@2x.png);
+    background-image: url(./../img/png/clock\ 1@2x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-two::before {
-    background-image: url(../../img/png/clock\ 1@3x.png);
+    background-image: url(./../img/png/clock\ 1@3x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1388,17 +1388,17 @@ header {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1.png);
+    background-image: url(./../img/png/diagram\ 1.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@2x.png);
+    background-image: url(./../img/png/diagram\ 1@2x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-three::before {
-    background-image: url(../../img/png/diagram\ 1@3x.png);
+    background-image: url(./../img/png/diagram\ 1@3x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1422,17 +1422,17 @@ header {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group.png), url(../../img/png/Star.png), url(../../img/png/Star.png), url(../../img/png/Star.png), url(../../img/png/Star.png);
+    background-image: url(./../img/png/Group.png), url(./../img/png/Star.png), url(./../img/png/Star.png), url(./../img/png/Star.png), url(./../img/png/Star.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png), url(../../img/png/Star@2x.png);
+    background-image: url(./../img/png/Group@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png), url(./../img/png/Star@2x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .second.container .mark.icon-four::before {
-    background-image: url(../../img/png/Group@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png), url(../../img/png/Star@3x.png);
+    background-image: url(./../img/png/Group@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png), url(./../img/png/Star@3x.png);
   }
 }
 

@@ -73,6 +73,11 @@ summary {display: list-item}
             <p class="modal__text-down">Please "click" on checkbox before send.</p>
             <button class="modal__close" type="button" data-modal-close>X</button>
         </section>
+        <section class="modal" succes>
+            <p class="modal__text-up">Congratulations! Your message with dream was &nbsp;<ins class="modal__text-up-white"> succes </ins>&nbsp; send to Santa Claus.</p>
+            <p class="modal__text-down">Happy New Year! 🎄🎁🎉🎊🧨</p>
+            <button class="modal__close" type="button" succes-modal-close>X</button>
+        </section>
     </main>
     <footer>
         <audio src="./audio/mp3/minimize.mp3" autoplay></audio>
@@ -81,7 +86,7 @@ summary {display: list-item}
         <div class="window__snow"></div>       
     </div>
     <p class="info">Made by Anatolii Ovcharuk, v. 1.0</p>
-    <script>
+    <!-- <script>
     (() => {
         const refs = {
           openModalBtn: document.querySelector("[data-modal-open]"),
@@ -96,6 +101,34 @@ summary {display: list-item}
           refs.modal.classList.toggle("focus");
         }
       })();
-    </script>
+    </script> -->
+        <script type="module">
+        const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        closeBtn: document.querySelector("[succes-modal-close]"),
+        check: document.querySelector(".form__label_checkbox"),
+        modal: document.querySelector("[data-modal]"),
+        succes: document.querySelector("[succes]"),
+        };
+
+        // console.log(refs.check.checked);
+
+        refs.openModalBtn.addEventListener("click", result);
+        refs.closeModalBtn.addEventListener("click", result);
+        refs.closeBtn.addEventListener("click", result);
+
+
+        function result(event) {
+            event.preventDefault();
+
+        if (refs.check.checked === false) {
+            refs.modal.classList.toggle("focus");
+        } else if (refs.check.checked === true) {
+            refs.succes.classList.toggle("focus");
+            // alert("Congratulations! Your message with dream was succes send to Santa Claus. Happy New Year! 🎄🎁🎉🎊🧨")
+        }
+        }
+        </script>
 </body>
 </html>
