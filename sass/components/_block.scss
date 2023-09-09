@@ -1,51 +1,104 @@
 // Content in block about skill
 
-.skill {
-    &__mark:hover .first, &__mark:focus .first {
-        color: $link-color;
+@media screen and (max-width: $tab-en) { 
+    .skill {
+        &__mark .first {
+            color: $link-color;
+        }
+    
+        &__mark .second {
+            animation: AnimText 8s linear 0s 1 normal forwards; 
+            animation-iteration-count: infinite;
+            color: $primary-color;
+        }
+    
+        &__mark .animation__block-one {
+            animation: AnimSecond 8s linear 0s 1 normal forwards;
+            animation-iteration-count: infinite; 
+        }
+    
+        &__mark .third {
+            color: $hover-color;
+            opacity: 1;  
+    
+            & .skill__mark__txt__block-one, & .skill__mark__txt__block-two {
+                translate: 0px 0px;   
+            } 
+        }
+    
+        &__mark .third + .skill__mark__title {
+            opacity: 0;
+        }
+    
+        &__mark .fourth {
+            color: $select-color;
+            opacity: 1;        
+        }
+    
+        &__mark .fiveth {
+            color: $second-color;
+            // color: $focus-color;
+            opacity: 1;
+            translate: 0px 0px;           
+        }
+    
+        &__mark .sixth {
+            color: $secondary-color;
+            // color: $focus-color;
+            opacity: 1;
+            transform: rotate(0) scale(1);   
+        }
     }
+}
 
-    &__mark:hover .second, &__mark:focus .second {
-        animation: AnimText 8s linear 0s 1 normal forwards; 
-        animation-iteration-count: infinite;
-        color: $primary-color;
-    }
-
-    &__mark:hover .animation__block-one, &__mark:focus .animation__block-one {
-        animation: AnimSecond 8s linear 0s 1 normal forwards;
-        animation-iteration-count: infinite; 
-    }
-
-    &__mark:hover .third, &__mark:focus .third {
-        color: $hover-color;
-        opacity: 1;  
-
-        & .skill__mark__txt__block-one, & .skill__mark__txt__block-two {
-            translate: 0px 0px;   
-        } 
-    }
-
-    &__mark:hover .third + .skill__mark__title, &__mark:focus .third + .skill__mark__title {
-        opacity: 0;
-    }
-
-    &__mark:hover .fourth, &__mark:focus .fourth {
-        color: $select-color;
-        opacity: 1;        
-    }
-
-    &__mark:hover .fiveth, &__mark:focus .fiveth {
-        color: $second-color;
-        // color: $focus-color;
-        opacity: 1;
-        translate: 0px 0px;           
-    }
-
-    &__mark:hover .sixth, &__mark:focus .sixth {
-        color: $secondary-color;
-        // color: $focus-color;
-        opacity: 1;
-		transform: rotate(0) scale(1);   
+@media screen and (min-width: $desk) { 
+    .skill {
+        &__mark:hover .first, &__mark:focus .first {
+            color: $link-color;
+        }
+    
+        &__mark:hover .second, &__mark:focus .second {
+            animation: AnimText 8s linear 0s 1 normal forwards; 
+            animation-iteration-count: infinite;
+            color: $primary-color;
+        }
+    
+        &__mark:hover .animation__block-one, &__mark:focus .animation__block-one {
+            animation: AnimSecond 8s linear 0s 1 normal forwards;
+            animation-iteration-count: infinite; 
+        }
+    
+        &__mark:hover .third, &__mark:focus .third {
+            color: $hover-color;
+            opacity: 1;  
+    
+            & .skill__mark__txt__block-one, & .skill__mark__txt__block-two {
+                translate: 0px 0px;   
+            } 
+        }
+    
+        &__mark:hover .third + .skill__mark__title, &__mark:focus .third + .skill__mark__title {
+            opacity: 0;
+        }
+    
+        &__mark:hover .fourth, &__mark:focus .fourth {
+            color: $select-color;
+            opacity: 1;        
+        }
+    
+        &__mark:hover .fiveth, &__mark:focus .fiveth {
+            color: $second-color;
+            // color: $focus-color;
+            opacity: 1;
+            translate: 0px 0px;           
+        }
+    
+        &__mark:hover .sixth, &__mark:focus .sixth {
+            color: $secondary-color;
+            // color: $focus-color;
+            opacity: 1;
+            transform: rotate(0) scale(1);   
+        }
     }
 }
 
