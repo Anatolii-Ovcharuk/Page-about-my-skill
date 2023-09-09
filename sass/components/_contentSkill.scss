@@ -464,15 +464,27 @@
             -moz-box-shadow: -1px 2px 4px 3px rgba(0, 0, 0, 0.75);
         }
 
-        &__mark:hover &__mark__window, &__mark:focus &__mark__window {
+        // &__mark:hover &__mark__window, &__mark:focus &__mark__window {
+        //     opacity: 1;
+        // }
+    }
+}
+
+@media screen and (max-width: $tab-en) {
+    .content-fourth__block {
+        &__mark &__mark__window {
             opacity: 1;
         }
     }
 }
 
-
-
-
+@media screen and (min-width: $desk) {
+    .content-fourth__block {
+        &__mark:hover &__mark__window, &__mark:focus &__mark__window {
+            opacity: 1;
+        }
+    }
+}
 
 
 .content-fiveth {
