@@ -1887,6 +1887,43 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   fill: var(--hover-color);
   border-color: var(--hover-color);
 }
+.footer__menu__button-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: inherit;
+  color: var(--text-color);
+  fill: var(--text-color);
+  border-color: var(--text-color);
+  transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+  margin: 3px 10px 10px 10px;
+  width: 90px;
+  height: 26px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.footer__menu__button-reset__icon {
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  cursor: inherit;
+}
+.footer__menu__button-reset__txt {
+  color: inherit;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 1.2; /* 16px or 1.2 */
+  letter-spacing: 0.03em;
+  margin: 5px;
+  cursor: inherit;
+}
+.footer__menu__button-reset:hover, .footer__menu__button-reset:focus {
+  color: var(--hover-color);
+  fill: var(--hover-color);
+  border-color: var(--hover-color);
+}
 
 @media screen and (max-width: 767px) {
   .footer__menu {

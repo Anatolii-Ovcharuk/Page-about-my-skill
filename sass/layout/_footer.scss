@@ -146,6 +146,43 @@
             border-color: $hover-color;
         }
     }
+
+    &__button-reset {
+        @include fc;
+        flex-wrap: nowrap;
+        background-color: inherit;
+        color: $text-color;
+        fill: $text-color;
+        border-color: $text-color;
+        transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
+        // margin: 3px;
+        margin: 3px 10px 10px 10px;
+        width: 90px;
+        height: 26px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+        &__icon {
+            display: block;
+            height: 30px;
+            width: 30px;
+            margin: 2px;
+            cursor: inherit;
+        }
+
+        &__txt {
+            color: inherit;
+            @include font($fw: 500, $fs: 9px, $lh: 1.2, $ls: 0.03em);
+            margin: 5px;
+            cursor: inherit;
+        }
+
+        &:hover, &:focus {
+            color: $hover-color;
+            fill: $hover-color;
+            border-color: $hover-color;
+        }
+    }
 }
 
 
