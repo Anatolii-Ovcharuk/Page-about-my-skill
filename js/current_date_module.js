@@ -16,7 +16,7 @@ const currentTime = () => {
     const time = remake_date.slice (16, 24) + ",";
     const zone = remake_date.slice (25, 33);
     const location =  remake_date.slice (34, 66);
-    const result = time + " " + day + " " + month + " " + year + " " + week + " " + zone + " " + location;
+    const result = time + " " + day + " " + month + " " + year + " " + week + " " + zone + " ";
     // console.log (result); /* Show result in console */
 
     /* Use one line code below this line. Include that's code <p time class="time" id="time"></p> in HTML page for show time. */

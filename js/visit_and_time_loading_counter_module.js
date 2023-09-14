@@ -7,10 +7,75 @@
 // "use strict"; /* That's Strict mode;  ⛔ DONT USE OTHER CODE WITH THIS IS STRICT, IF YOUR ALL CODE NOT "USE STRICT" OR TYPE="MODULE"... */
 
 
+
+
+
+/* Code using LocalStorage */
+
+/* That's default variables*/
+let visitCount = 0;
+let totalTimeLoadPage = 0;
+let resultTimeLoadPage = 0;
+
+
+if (localStorage.key(0) === "totalTimeLoadPage" && localStorage.key(1) === "visitCount") { // localStorage.length >= 1
+    visitCount = localStorage.getItem("visitCount");
+    visitCount = Number.parseFloat(visitCount);
+    totalTimeLoadPage = localStorage.getItem("totalTimeLoadPage");
+    totalTimeLoadPage = Number.parseFloat(totalTimeLoadPage);
+} else {
+    localStorage.setItem("visitCount", visitCount);
+    localStorage.setItem("totalTimeLoadPage", totalTimeLoadPage);
+}
+
+
+resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000;
+
+const totalTimeLoad = () => {
+    const result = totalTimeLoadPage += resultTimeLoadPage;
+    totalTimeLoadPage = result;
+    localStorage.setItem("totalTimeLoadPage", result);
+    return result;
+}
+
+const visitProcess = () => {
+    const result = visitCount += 1;
+    visitCount = result;
+    localStorage.setItem("visitCount", result);
+    return result;
+}
+
+const statsMiddle = () => totalTimeLoad() / visitCount;
+
+
+    /* Use one line code below this line. Include that's code <p class="visit" id="visit" visit ></p> in HTML page for show information. */
+    // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle().toFixed(3)}s. `; /* Show result in HTML by property */
+    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | You are visited this page of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle().toFixed(3)} s. `; /* Show result in HTML by ID */
+
+    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CODE WITH USING DATA !!!!
+
+
 /* That's default variables*/
 // let visitCount = 0;
 // let totalTimeLoadPage = 0;
-let  resultTimeLoadPage = 0;
+// let  resultTimeLoadPage = 0; // +++ MINIMAL
 
 // const requestURL = '/json/data.json';
 // let response = await fetch(requestURL);
@@ -24,7 +89,7 @@ let  resultTimeLoadPage = 0;
 // };
 
 
-resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000;
+// resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000; // +++ MINIMAL
 
 // const totalTimeLoad = () => {
 //     const result = totalTimeLoadPage += resultTimeLoadPage;
@@ -43,12 +108,13 @@ resultTimeLoadPage = (timeEndLoadingPage - timeStartLoadingPage) / 1000;
 // const statsMiddle = () => totalTimeLoad() / visitCount;
 
     /* Use one line code below this line. Include that's code <p class="visit" id="visit" visit ></p> in HTML page for show information. */
-    // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle()}s. `; /* Show result in HTML by property */
-    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | Visited of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle()} s. `; /* Show result in HTML by ID */
+    // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle().toFixed(3)}s. `; /* Show result in HTML by property */
+    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | Visited of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle().toFixed(3)} s. `; /* Show result in HTML by ID */
 
-    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
+    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */ // +++ MINIMAL
 
-    console.log(data);
+    // console.log(data);
+
 
 
 // ----------------------------- ОТПРАВКА - № 1 -----------------------------
