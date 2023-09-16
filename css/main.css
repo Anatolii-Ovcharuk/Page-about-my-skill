@@ -1627,8 +1627,8 @@ main .lang__choice a:hover, main .lang__choice a:focus {
 }
 @media screen and (max-width: 767px) {
   .menu__link__icon {
-    width: 14px;
-    height: 14px;
+    width: 28px;
+    height: 28px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1898,8 +1898,8 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   border-color: var(--text-color);
   transition: color linear 250ms, fill linear 250ms, border-color linear 250ms;
   margin: 3px 10px 10px 10px;
-  width: 90px;
-  height: 26px;
+  width: 100px;
+  height: 34px;
   margin-left: 20px;
   cursor: pointer;
 }
@@ -1934,6 +1934,10 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     margin-right: auto;
     margin-bottom: 6px;
   }
+  .footer__menu__button-reset {
+    width: 100px;
+    height: 34px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1099px) {
   .footer__menu {
@@ -1944,6 +1948,10 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     margin-right: auto;
     margin-bottom: 6px;
   }
+  .footer__menu__button-reset {
+    width: 100px;
+    height: 34px;
+  }
 }
 @media screen and (min-width: 1100px) {
   .footer__menu {
@@ -1952,6 +1960,10 @@ main .lang__choice a:hover, main .lang__choice a:focus {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+  .footer__menu__button-reset {
+    width: 90px;
+    height: 26px;
   }
 }
 .stats {

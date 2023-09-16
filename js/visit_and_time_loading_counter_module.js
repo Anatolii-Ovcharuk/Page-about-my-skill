@@ -50,6 +50,15 @@ const visitProcess = () => {
 
 const statsMiddle = () => totalTimeLoad() / visitCount;
 
+/* Use one line code below this line. Include that's code <p class="visit" id="visit" visit ></p> in HTML page for show information. */
+
+function showStat () {
+    // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle().toFixed(3)}s. `; /* Show result in HTML by property */
+    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | You are visited this page of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle().toFixed(3)} s. `; /* Show result in HTML by ID */
+
+    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
+};
+
 showStat();
 
 const reset = document.querySelector(".footer__menu__button-reset");
@@ -59,21 +68,14 @@ reset.addEventListener("click", (event) => {
     resultTimeLoadPage = 0;
 
     /* Use one of this is... */
-    localStorage.clear()
-    // saveStat();
+    // localStorage.clear() /* - Notification: That's stats stuck on new mobile. */
+    saveStat();
 
     showStat();
+    return console.log("Stats was reset.")
 });
 
 
-    /* Use one line code below this line. Include that's code <p class="visit" id="visit" visit ></p> in HTML page for show information. */
-
-function showStat () {
-    // document.querySelector("[visit]").innerHTML = `Current time to load this page ${resultTimeLoadPage}s. | Visited of all time: ${visitProcess()}. | Middle time to loading page of all time: ${statsMiddle().toFixed(3)}s. `; /* Show result in HTML by property */
-    document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s. | You are visited this page of all time: ${visitProcess()}. | Time to loading page of all time: ${statsMiddle().toFixed(3)} s. `; /* Show result in HTML by ID */
-
-    // document.getElementById('visit').innerHTML = `Current time to load this page ${resultTimeLoadPage} s.`; /* Show result in HTML by ID */
-};
 
 
 
