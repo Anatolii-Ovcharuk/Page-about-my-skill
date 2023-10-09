@@ -173,6 +173,26 @@ header, main, footer {
         color: #ffffff;
     }
 
+.theme-body-first {
+    background-color: #272727;
+}
+
+.theme-body-second {
+    background-color: #2d3b4e;
+}
+
+.theme-body-third {
+    background-color: #4e2d2d;
+}
+
+.theme-body-fourth {
+    background-color: #4a4e2d;
+}
+
+.theme-body-fiveth {
+    background-color: #2f4e2d;
+}
+
     /* For current page */
     .page__basic__footer {
         border-top: 1px solid var(--secondary-color);
@@ -206,7 +226,7 @@ header, main, footer {
     </style>
 </head>
 
-<body class="page__basic">
+<body class="page__basic theme-body-first">
     <div class="magic">
         <!-- <h1><span class="namedecor"></span></h1> -->
     </div>
@@ -593,7 +613,8 @@ header, main, footer {
     <!-- <script src="../../js/count_download_module.js" type="module"></script> -->
     <script src="../../js/visit_and_time_loading_counter_module.js" type="module"></script>
     
-    <script type="module">
+    <!-- NEXT SELECT SCRIPT WITH OLD OR NEW CODE -->
+    <!-- <script type="module">
         // THEME SCRIPT
         // "use strict";
         const theme = {
@@ -603,8 +624,9 @@ header, main, footer {
         theme.themeBtn.addEventListener("click", toggleTheme);
 
         function toggleTheme() {
-        document.body.classList.toggle("theme-body");
-    }
+        document.body.classList.toggle("theme-body");}
+    </script> -->
+    <script src="../../js/theme_module.js" type="module"></script>
     </script>
 
     <script type="module">

@@ -156,7 +156,7 @@ header, main, footer {
     100% {  opacity: 0;}
 }
 
-.time {
+.time, .update {
     text-align: center;
     margin: 5px 15px 15px 15px;
 }
@@ -164,10 +164,30 @@ header, main, footer {
 .theme-body {
     background-color: #2d3b4e; /* or use #4e2d2d; */
 }
+
+.theme-body-first {
+    background-color: #272727;
+}
+
+.theme-body-second {
+    background-color: #2d3b4e;
+}
+
+.theme-body-third {
+    background-color: #4e2d2d;
+}
+
+.theme-body-fourth {
+    background-color: #4a4e2d;
+}
+
+.theme-body-fiveth {
+    background-color: #2f4e2d;
+}
     </style>
 </head>
 
-<body class="page__language">
+<body class="page__language theme-body-first">
     <div class="magic">
     </div>
     <header>
@@ -208,12 +228,14 @@ header, main, footer {
             <!-- <audio class="loop" src="../../audio/mp3/loop-112_eq_cut.mp3" type="audio/mpeg" controls autoplay loop></audio> -->
         </section>
         <p class="time" id="time" time ></p>
+        <p class="update" translate="yes">Last update page: 09.10.2023</p>
     </footer>
     <script src="./js/current_date_module.js" type="module"></script>
 
     <!-- <platform></platform> What this is?? -->
 
-    <script type="module">
+    <!-- NEXT SELECT SCRIPT WITH OLD OR NEW CODE -->
+    <!-- <script type="module">
         // THEME SCRIPT
         // "use strict";
         const theme = {
@@ -224,7 +246,9 @@ header, main, footer {
 
         function toggleTheme() {
         document.body.classList.toggle("theme-body");}
-    </script>
+    </script> -->
+        <script src="./js/theme_module.js" type="module"></script>
+
     <script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
 
     <script type="module">
