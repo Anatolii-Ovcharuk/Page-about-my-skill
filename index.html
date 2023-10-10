@@ -156,7 +156,7 @@ header, main, footer {
     100% {  opacity: 0;}
 }
 
-.time, .update {
+.time, .update, .ip {
     text-align: center;
     margin: 5px 15px 15px 15px;
 }
@@ -228,7 +228,8 @@ header, main, footer {
             <!-- <audio class="loop" src="../../audio/mp3/loop-112_eq_cut.mp3" type="audio/mpeg" controls autoplay loop></audio> -->
         </section>
         <p class="time" id="time" time ></p>
-        <p class="update" translate="yes">Last update page: 09.10.2023</p>
+        <p class="ip" id="ip"></p>
+        <p class="update" translate="yes">Last update page: 10.10.2023</p>
     </footer>
     <script src="./js/current_date_module.js" type="module"></script>
 
@@ -248,8 +249,6 @@ header, main, footer {
         document.body.classList.toggle("theme-body");}
     </script> -->
         <script src="./js/theme_module.js" type="module"></script>
-
-    <script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
 
     <script type="module">
 // AUDIO LOOP SCRIPT
@@ -318,5 +317,11 @@ function stopPlay () {
 
 refsAudio.play();
     </script>
+
+<!-- Detect IP Adress user -->
+<script src="./js/ip_info_module.js" type="module"></script>
+
+<script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
+
 </body>
 </html>

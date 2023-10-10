@@ -43,6 +43,7 @@
         display: flex;
         flex-wrap: nowrap;
         background-color: inherit;
+        border-radius: 10px;
         color: $text-color;
         fill: $text-color;
         border-color: $text-color;
@@ -79,6 +80,7 @@
         @include fc;
         flex-wrap: nowrap;
         background-color: inherit;
+        border-radius: 10px;
         color: $text-color;
         fill: $text-color;
         border-color: $text-color;
@@ -115,6 +117,7 @@
         @include fc;
         flex-wrap: nowrap;
         background-color: inherit;
+        border-radius: 10px;
         color: $text-color;
         fill: $text-color;
         border-color: $text-color;
@@ -151,6 +154,7 @@
         @include fc;
         flex-wrap: nowrap;
         background-color: inherit;
+        border-radius: 10px;
         color: $text-color;
         fill: $text-color;
         border-color: $text-color;

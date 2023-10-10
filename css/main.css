@@ -983,6 +983,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   display: flex;
   flex-wrap: nowrap;
   background-color: inherit;
+  border-radius: 10px;
   color: var(--title-color);
   fill: var(--title-color);
   border-color: var(--title-color);
@@ -1782,6 +1783,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   display: flex;
   flex-wrap: nowrap;
   background-color: inherit;
+  border-radius: 10px;
   color: var(--text-color);
   fill: var(--text-color);
   border-color: var(--text-color);
@@ -1819,6 +1821,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   align-items: center;
   flex-wrap: nowrap;
   background-color: inherit;
+  border-radius: 10px;
   color: var(--text-color);
   fill: var(--text-color);
   border-color: var(--text-color);
@@ -1856,6 +1859,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   align-items: center;
   flex-wrap: nowrap;
   background-color: inherit;
+  border-radius: 10px;
   color: var(--text-color);
   fill: var(--text-color);
   border-color: var(--text-color);
@@ -1893,6 +1897,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   align-items: center;
   flex-wrap: nowrap;
   background-color: inherit;
+  border-radius: 10px;
   color: var(--text-color);
   fill: var(--text-color);
   border-color: var(--text-color);
