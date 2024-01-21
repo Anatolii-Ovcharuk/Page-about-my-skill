@@ -156,7 +156,7 @@ header, main, footer {
     100% {  opacity: 0;}
 }
 
-.time, .update, .ip {
+.time, .update, .ip, .client {
     text-align: center;
     margin: 5px 15px 15px 15px;
 }
@@ -229,7 +229,8 @@ header, main, footer {
         </section>
         <p class="ip" id="ip"></p>
         <p class="time" id="time" time ></p>
-        <p class="update" translate="yes">Last update page: 11.10.2023</p>
+        <div class="client" id="client" client ></div>
+        <p class="update" translate="yes">Last update page: 21.01.2024</p>
     </footer>
     <script src="./js/current_date_module.js" type="module"></script>
 
@@ -320,6 +321,14 @@ refsAudio.play();
 
 <!-- Detect IP Adress user -->
 <script src="./js/ip_info_module.js" type="module"></script>
+
+<script type="module">
+    const clientInfo = document.querySelector(".client");
+    clientInfo.innerHTML = `<p>Operation system user: ${navigator.oscpu}.</p><p>Browser: ${navigator.userAgent}.</p>`
+
+        console.log(navigator)
+
+</script>
 
 <script> "use strict"; const timeEndLoadingPage = Date.now(); </script>
 

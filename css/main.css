@@ -64,7 +64,7 @@ p, h1, h2, h3, ul, li {
 }
 @media screen and (min-width: 561px) and (max-width: 767px) {
   .correct {
-    height: 1260px;
+    height: 1290px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1056,7 +1056,7 @@ main .lang__choice a:hover, main .lang__choice a:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   cursor: inherit;
   opacity: 0;
   transition: opacity linear 250ms;

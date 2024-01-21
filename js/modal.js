@@ -95,6 +95,7 @@ const cont = {
     document.body.classList.toggle("remake-body");
     refs.modal.classList.toggle("focus");
     cont.contentFour.classList.toggle("show");
+    cont.correctMain.classList.toggle("correct");
   }
 
   function toggleModalFive() {
